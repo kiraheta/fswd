@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../index.html"><img class="logo jumbotron img-responsive" src="../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Adding Facebook and other providers </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=sy452wLnv4Q"> 1. Adding Additional OAuth Providers </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=3FRNU35Km2s"> 2. Registering your App with Facebook </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>
+                    The <a href="https://developers.facebook.com/">Facebook Developers Page</a> can be found here.<br><br>
+
+                    The <a href="https://github.com/udacity/ud330/blob/master/Lesson4/step2/fb_client_secrets.json">fb_client_secrets.json</a> file can be found here.<br><br>
+
+                    <strong>Important:</strong> Be sure to include a Valid OAuth redirect URI just like we did with the Google OAuth flow. To do that...<br><br>
+
+                    1. Go to your app on the Facebook Developers Page.<br>
+                    2. Then click <strong>Settings</strong> in the left column.<br>
+                    3. Click <strong>Advanced</strong><br>
+                    4. Scroll down to the <emphasis>Client OAuth Settings</emphasis> section<br>
+                    5. Add <code>http://localhost:5000/</code> to the <strong>Valid OAuth redirect URIs</strong> section<br><br>
+                    <img class="img-responsive" src="../images/client_oauth_settings.png"
+                         alt="client oauth settings"></a><br>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=CFQHeWkTciE"> 3. Client-side Login with Facebook SDK </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=bM44hlBH3gU"> 4. Quiz: Updating login.html </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> View <a href="https://github.com/udacity/ud330/tree/master/Lesson4/step1/templates/login.html">login.html</a> with Facebook login
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=0duUHk-Bqy8"> 5. Update project.py (part 1) </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> <strong>Important:</strong> Facebook has updated their API since this course was released. This affects code that is shown in this video at 0:32 on line 194. Instead of...<br><br>
+
+                      <code>url = 'https://graph.facebook.com/v2.2/me?%s' % token</code><br><br>
+
+                      ... the code must be...<br><br>
+
+                      <code>url = 'https://graph.facebook.com/v2.8/me?%s&fields=name,id,email' % token</code><br><br>
+
+                      Here is some more information about the change:<br><br>
+
+                      <emphasis>An app can make calls to the version of the API that was the latest available when the app was created, as well as any newer, un-deprecated versions launched after the app is created.</emphasis><br><br>
+
+                      Here is the main change from version 2.2 that will impact Full-Stack students:<br><br>
+
+                      <emphasis>Fewer default fields for faster performance: To help improve performance on mobile network connections, we've reduced the number of fields that the API returns by default. You should now use the <code>?fields=field1,field2</code> syntax to declare all the fields you want the API to return.</emphasis><br><br>
+
+                      They say "we've reduced the number of fields that the API returns by default." This is important because one of the fields that is no longer returned by default is the <code>email</code> field. You must now explicitly request email to be returned (along with the other fields you want).<br><br>
+
+                      The API version 2.2 that was used in this course has been officially deprecated by Facebook as of March 25th, 2017. Requests made to that version will no longer work. Please use the most current version of the Facebook API with your project code.<br>
+                  </p>
+                </li>
+              </ol>
+
+
+            <h4><a href="https://www.youtube.com/watch?v=bGN2d9HKvNY"> 6. Update project.py (part 2) </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=WySVIbTfT90"> 7. Quiz: Updating project.py Code </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> In order to properly log out of Facebook, the access token needs to be sent along with the facebook id in fbdisconnect. Please see the new code in the fbconnect and fbdisconnect methods in the <a href="https://github.com/udacity/ud330/tree/master/Lesson4/step2/project.py">project.py</a> file.
+
+                      View the code for this activity on <a href="https://github.com/udacity/ud330/tree/master/Lesson4/step2">GitHub</a>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=gtibSNC0KcI"> 8. Exploring other OAuth2.9 Providers </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> Check out some of these links below to add OAuth 2.0 using these other popular providers:<br><br>
+
+                      <a href="http://login.amazon.com/website">OAuth 2.0 with Amazon</a><br>
+                      <a href="https://developer.github.com/v3/oauth/">OAuth 2.0 with Github</a><br>
+                      <a href="https://developer.paypal.com/docs/integration/direct/paypal-oauth2/">OAuth 2.0 with Paypal</a><br>
+                  </p>
+                </li>
+              </ol>
+
+            <h4><a href="https://www.youtube.com/watch?v=1UzLe18r_Xo"> 9. Outro </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> The final code for this project can be found on <a href="https://github.com/udacity/ud330">GitHub</a>.
+
+                      Here is the <a href="http://oauth.net/2/">Offical OAuth 2.0 website</a>.
+                  </p>
+                </li>
+              </ol>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
