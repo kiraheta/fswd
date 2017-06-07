@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../index.html"><img class="logo jumbotron img-responsive" src="../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Local Permission System </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=nNBMggxZNj8"> 1. Lesson 3 Introduction </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=uog6ImM3IWo"> 2. Implementing a Local Permission System </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=KyWbG-OierA"> 3. Quiz: Updating the User Model </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>
+                    <a href="https://github.com/udacity/ud330/blob/master/Lesson3/step2Quiz/database_setup.py">database_setup.py</a><br>
+                    <a href="https://github.com/udacity/ud330/blob/master/Lesson3/step2Quiz/lotsofmenus.py">lotsofmenus.py</a><br>
+                    <a href="https://www.youtube.com/watch?v=aHRTFkT1oug">Solution video</a><br>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=SSWfr2sBBCM"> 4. Creating a New User </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>
+                    You can view these helper functions on line 131 of <a href="https://github.com/udacity/ud330/blob/master/Lesson3/step2Quiz/project.py">project.py</a>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=wb20eVxwq7g"> 5. Quiz: Obtaining credentials of an Existing User </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=Bu8NINOUsvo"> 6. Quiz: Protect Menu Pages </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>
+                    Click to view the <a href="https://github.com/udacity/ud330/blob/master/Lesson3/step3/templates/publicmenu.html">publicmenu.html</a> and <a href="https://github.com/udacity/ud330/blob/master/Lesson3/step3/templates/publicrestaurants.html">publicrestaurants.html</a> templates.<br>
+
+                    <h5>Note:</h5>
+                    In order to view the profile picture of the creator of each menu, add code to your project.py file to query the creator:<br><br>
+
+                    <code>creator = getUserInfo(restaurant.user_id)</code><br><br>
+
+                    then pass in the creator object when you render the template:<br><br>
+
+                    <code>return render_template('publicmenu.html', items = items, restaurant = restaurant, creator= creator)</code><br><br>
+
+                    Inside your templates you can now use <code>{{creator.picture}}</code> and <code>{{creator.name}}</code> to share the name and picture of each restaurant creator.<br><br>
+                    Video <a href="https://www.youtube.com/watch?v=eLPcDIiv75U">solution</a>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=QoSVT67PyHQ"> 7. Wrap-up Lesson 3 </a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
