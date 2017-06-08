@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../index.html"><img class="logo jumbotron img-responsive" src="../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Accessing Published APIs </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=5nWz7OmRxjU"> 1. Lesson 2 Intro </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=pHFWGN-upGM"> 2. Parts of an HTTP Request </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=c9sMNc2PrMU"> 3. HTTP Response </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=U_mbqqkM9mg"> 4. Sending API Requests with Postman and Curl </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>Check out the official cURL <a href="http://curl.haxx.se/docs/manpage.html">documentation</a> and this <a href="http://www.ethanmick.com/getting-started-with-curl/">blog post</a> for getting started with cURL.<br><br>
+                     Check out the <a href="https://www.getpostman.com/docs">Postman Documentation</a> as well.<br><br>
+                     You should also be familiar with <a href="https://en.wikipedia.org/wiki/Query_string">query strings</a> as option to pass in variables straight from the URI.
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=LRKb7bPcGaw"> 5. Quiz: Sending API Requests </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>Download the code for <a href="https://github.com/udacity/APIs/blob/master/Lesson_2/06_Sending%20API%20Requests/api_server.py">api_server.py</a> here.<br><br>
+
+                     There are some exceptions, but for most use cases:<br>
+                     <strong>HTTP <--> CRUD</strong><br>
+                     GET <--> READ<br>
+                     POST<--> CREATE<br>
+                     PUT <--> UPDATE<br>
+                     DELETE-<-->DELETE<br><br>
+
+                     Download the code for <a href="https://github.com/udacity/APIs/blob/master/Lesson_2/06_Sending%20API%20Requests/api_server.py">api_server.py</a> here.<br><br>
+
+                     If you've heard about the PATCH method before and are curious about the difference between <a href="http://restful-api-design.readthedocs.org/en/latest/methods.html#patch-vs-put">PATCH vs. PUT</a> check out this article.
+                  </p>
+                </li>
+              </ol>
+
+            <h4><a href="https://www.youtube.com/watch?v=aqZc9aky2WU"> 6. Searching for API Documentation </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=OZdhXtpMYpQ"> 7. Quiz: Delving into APIs </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> <a href="https://developers.google.com/maps/?hl=en">Google Maps API</a><br><br>
+                      First, get your <a href="https://developers.google.com/maps/documentation/geocoding/get-api-key">Google Maps API key</a><br><br>
+                      Then use the <a href="https://developers.google.com/maps/documentation/geocoding/intro">Google Maps Geocoding API</a>.<br>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=mHlasP-fP9w"> 8. Quiz: Using the Foursquare API </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>Here's the <a href="https://developer.foursquare.com/">Foursquare API</a>.<br><br>
+
+                     You may have realized that Foursquare has a geolocating capability as well, but since you already learned how to use the google maps one, you might as well put it to good use ;-)<br><br>
+
+                     You can copy and paste the coordinates below: <br>
+                     Mountain View, California (37.392971, -122.076044)<br>
+                     Miami, Florida (25.773822, -80.237947)<br>
+                     Washington, DC (38.897478, -77.000147)<br>
+                     New York, New York (40.768349, -73.96575)<br>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=WrBRxsumxaM"> 9. Requesting from Python Code </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=t5LoFkbGXcM"> 10. Parsing Your Response </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p> Check out the <a href="https://github.com/udacity/APIs/blob/master/Lesson_2/10_Requesting%20from%20Python%20Code/geocode.py">geocode.py</a> file from this activity.
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=ebPacNWlVps"> 11. Quiz: Make Your Own API Mashup </a></h4>
+              <ol style="list-style-type:square">
+                <li>
+                  <p>Download the <a href="https://github.com/udacity/APIs/tree/master/Lesson_2/12_Make_Your_Own_Mashup/starter_code">starter code</a> for this exercise.<br><br>
+                     View the <a href="https://github.com/udacity/APIs/tree/master/Lesson_2/12_Make_Your_Own_Mashup/solution_code">solution code</a> for this exercise.<br>
+                     <a href="https://www.youtube.com/watch?v=PswkxI3a6oU"> Solution video</a>
+                  </p>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=GEnz-eS0GtI"> 12. Lesson 2 Wrap Up </a></h4>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
