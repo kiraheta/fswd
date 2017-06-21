@@ -3,6 +3,10 @@ html,body {
   overflow-x: hidden;
 }
 
+ol {
+  list-style-type:square;
+}
+
 .logo {
   align: center;
 }
