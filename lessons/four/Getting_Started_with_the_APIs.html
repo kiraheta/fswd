@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/four.html"><span class="glyphicon glyphicon-circle-arrow-left" style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Getting Started with the APIs  </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=kMPrvtWOIQ8"> 1.Intro </a></h4>
+            <h4> 2. Your Project</h4>
+              <ol>
+                <li>Before you can get started rendering maps, using services,
+                    and generally being a really cool individual, you need to
+                    have your own Google Developer Project.
+                    <br><br>
+                    If you don’t already have one, you can go to the
+                    <a href="https://console.developers.google.com/"> Google
+                    APIs Console</a> and create your own project. This is free
+                    and will allow you to generate your own API key to use
+                    within your site.<br><br>
+                    <ol>
+                      <li> 1. Visit <a href="https://console.developers.google.com">
+                           https://console.developers.google.com</a>
+                      </li><br>
+                      <li> 2. Sign in with your Google - i.e. yourname@gmail.com.
+                      </li><br>
+                      <li> 3. Click on "Select a Project" and then "Create a
+                           Project" in the upper right side of the screen.
+                      </li><br>
+                      <li> 4. Name your project something descriptive, such as
+                           "Udacity-Maps-Project" or "Emily-likes-buffalo-wings".
+                           Select whether you'd like to receive updates
+                           (usually a good idea) and select whether you agree
+                           to the terms of service.
+                      </li><br>
+                      <li>5. Click the "Create" button.</li>
+                      <li>6. Click on the "Google Maps JavaScript API" under "Google Maps APIs"</li>
+                      <li>7. Click the "Enable" button</li>
+                      <li>8. Repeat steps 6 and 7 for the following APIs
+                          (highlighted in yellow) which we'll use in this course:
+                          </li>
+                          <ol>
+                            <li>Google Maps JS API</li>
+                            <li>Google Maps Roads API</li>
+                            <li>Google Static Maps API</li>
+                            <li>Google Street View Image API</li>
+                            <li>Google Places API Web Service</li>
+                            <li>Google Maps Geocoding API</li>
+                            <li>Google Maps Directions API</li>
+                            <li>Google Maps Distance Matrix API</li>
+                            <li>Google Maps Geolocation API</li>
+                            <li>Google Maps Elevation API</li>
+                            <li>Google Maps Time Zone API</li>
+                          </ol>
+                      <li>9. Click the “Credentials” menu item on the left of the screen</li>
+                      <li>10. Click the “Create Credentials” button</li>
+                      <li>11. Select “API Key” from the options that appear.</li>
+                      <li>12. Select the “Browser Key” button</li>
+                      <li>13. Name your API Key something descriptive, such as
+                          Maps_API_Udacity_Course. It should reflect your
+                          intended use of the key. Click the “Create” button
+                      </li>
+                      <li>14. Repeat steps 10 and 11 for “Server Key,” if you
+                          will be making server-side requests. You can access
+                          these keys at any time by visiting the “Credentials”
+                          sub-menu under the “API Manager” menu
+                      </li>
+                      <li>15. Get mapping!</li>
+                    </ol>
+                </li>
+              </ol>
+            <h4><a href="https://www.youtube.com/watch?v=OxXLSo3dDZ4"> 3. Quiz: Your API Key </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=2mWonkVa5Cs"> 4. The JavaScript API Overview V2.2</a></h4>
+            <ol><li>To download the project code we've built and demonstrated
+                    up to this point, visit this course's GitHub
+                    <a href="https://github.com/udacity/ud864">repository.</a>
+                    Make sure you replace "MYAPIKEY" in the JavaScript API call
+                    with your generated API key in each code sample.
+                </li><br>
+                <li>The full reference guide for the JavaScript API is available
+                    <a href="https://developers.google.com/maps/documentation/javascript/reference">
+                     here.
+                </li>
+            </ol>
+            <h4><a href="https://www.youtube.com/watch?v=Giw_pLpX7ac"> 5. Quiz: Hello Map </a></h4>
+            <ol>
+              <li>Get the starter code for this quiz in this course's GitHub <a href="https://github.com/udacity/ud864/blob/master/04_Hello_Map_Quiz.html">repository</a>.</li>
+              <li>To get coordinates of a specific location, try visiting <a href="https://google-developers.appspot.com/maps/documentation/utils/geocoder/">this page!</a></li>
+              <li>If you need help, see the getting started documentation <a href="https://developers.google.com/maps/documentation/javascript/tutorial">here</a>!</li>
+            </ol>
+            <h4><a href="https://www.youtube.com/watch?v=Dzw4e5pYTj8"> 6. Making Your Mark V3 </a></h4>
+            <ol>
+              <li>To download the project code we've built and demonstrated up to this point, visit this course's GitHub <a href="https://github.com/udacity/ud864">repository</a>. Make sure you replace "MYAPIKEY" in the JavaScript API call with your generated API key in each code sample.</li>
+              <li>See our developer site for more information on <a href="https://developers.google.com/maps/documentation/javascript/markers">markers</a>.</li>
+              <li>The full reference guide for the JavaScript API is available <a href="https://developers.google.com/maps/documentation/javascript/reference">here</a>.</li>
+            </ol>
+            <h4><a href=""> 7. </a></h4>
+            <h4><a href=""> 8. </a></h4>
+            <h4><a href=""> 9. </a></h4>
+            <h4><a href=""> 10. </a></h4>
+            <h4><a href=""> 11. </a></h4>
+            <h4><a href=""> 12. </a></h4>
+            <h4><a href=""> 13. </a></h4>
+            <h4><a href=""> 14. </a></h4>
+            <h4><a href=""> 15. </a></h4>
+            <h4><a href=""> 16. </a></h4>
+            <h4><a href=""> 17. </a></h4>
+            <h4><a href=""> 18. </a></h4>
+          </div>
+        </div>
+
+        <ol><li></li></ol>
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
