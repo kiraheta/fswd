@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/four.html"><span class="glyphicon glyphicon-circle-arrow-left" style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Neighborhood Map </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4> 1. Project Overview </h4>
+            <ol>
+              <li>
+                    <h5>Project Overview</h5>
+                    You will develop a single page application featuring a map
+                    of your neighborhood or a neighborhood you would like to
+                    visit. You will then add functionality to this map
+                    including highlighted locations, third-party data about
+                    those locations and various ways to browse the
+                    content.<br><br>
+              </li>
+              <li>
+                    <h5>Why This Project?</h5>
+                    The neighborhood map application is complex enough and
+                    incorporates a variety of data points that it can easily
+                    become unwieldy to manage. There are a number of frameworks,
+                    libraries and APIs available to make this process more
+                    manageable and many employers are looking for specific
+                    skills in using these packages.<br><br>
+              </li>
+              <li>
+                    <h5>What Will I Learn?</h5>
+                    You will learn how design patterns assist in developing a
+                    manageable codebase. You’ll then explore how frameworks can
+                    decrease the time required developing an application and
+                    provide a number of utilities for you to use. Finally,
+                    you’ll implement third-party APIs that provide valuable
+                    data sets that can improve the quality of your
+                    application.<br><br>
+              </li>
+              <li>
+                    <h5>How Does This Help My Career?</h5>
+                    <ol>
+                      <li>Interacting with API servers is the primary function of Front-End Web Developers</li>
+                      <li>Use of third-party libraries and APIs is a standard and acceptable practice that is encouraged</li>
+                      <li>Asynchronous programming is important to understand in today's market</li>
+                    </ol>
+                    <br>
+              </li>
+            </ol>
+            <h4> 2. Project Details </h4>
+            <ol>
+              <li>
+                <h5>How will I complete this project?</h5>
+                <ol>
+                  <li>
+                      1. Review our course
+                      <a href="https://www.udacity.com/course/ud989-nd">
+                      JavaScript Design Patterns</a> and check out the
+                      Neighborhood Map project
+                      <a href="../../images/P_Neighborhood_Map_Rubric.pdf">
+                      rubric</a>.
+                  </li><br>
+                  <li>
+                      2. Download the <a href="http://knockoutjs.com/">Knockout
+                      framework</a>. Knockout must be used to handle the list,
+                      filter, and any other information on the page that is
+                      subject to changing state. Things that should not be
+                      handled by Knockout: anything the Maps API is used for,
+                      creating markers, tracking click events on markers, making
+                      the map, refreshing the map. <br><strong>Note 1:</strong>
+                      Tracking click events on list items should be handled
+                      with Knockout. <br><strong>Note 2:</strong> Creating your
+                      markers as a part of your ViewModel is allowed (and
+                      recommended). Creating them as Knockout observables is
+                      not.
+                  </li><br>
+                  <li>
+                      3. Asynchrony and Error Handling. Note that all data APIs
+                      used in the project should
+                      <a href="https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282">
+                      load asynchronously</a> and errors should be handled
+                      gracefully. In case of error (e.g. in a situation where a
+                      third party API does not return the expected result) we
+                      expect your webpage to do one of the following: A message
+                      is displayed notifying the user that the data can't be
+                      loaded, <strong>OR</strong> There are no negative
+                      repercussions to the UI. <strong>Note:</strong> Please
+                      note that we expect students to handle errors if the
+                      browser has trouble initially reaching the 3rd-party site
+                      as well. For example, imagine a user is using your
+                      Neighborhood Map, but her firewall prevents her from
+                      accessing the Instagram servers. Here is a reference
+                      article on
+                      <a href="http://www.digitaltrends.com/computing/how-to-block-a-website/">
+                      how to block websites</a> with the hosts file. It
+                      is important to handle errors to give users a consistent
+                      and good experience with the webpage. Read this
+                      <a href="http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/">
+                      blogpost</a> to learn more. Some JavaScript libraries
+                      provide special methods to handle errors. For example:
+                      refer to .fail() method discussed
+                      <a href="http://api.jquery.com/jquery.ajax/#jqXHR">here
+                      </a> if you use jQuery's ajax() method. We strongly
+                      encourage you to explore ways to handle errors in the
+                      library you are using to make API calls.
+                  </li><br>
+                  <li>
+                      4. Write code required to add a full-screen map to your
+                      page using the
+                      <a href="https://developers.google.com/maps/">Google Maps
+                      API</a>. For sake of efficiency, the map API should be
+                      called only once.
+                  </li><br>
+                  <li>
+                      5. If you are prompted to do so, you may want to get a
+                      <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">
+                      Google Maps API</a> key, and include it as the value of
+                      the <code>key</code> parameter when loading the Google
+                      Maps API in index.html:
+                      <code><script
+                      src="http://maps.googleapis.com/maps/api/js?libraries=places&key=[YOUR_API_KEY]">
+                      </script></code> You may have some initial concerns with
+                      placing your API key directly within your JavaScript
+                      source files, but rest assured this is perfectly safe.
+                      All client-side code must be downloaded by the client;
+                      therefore, the client must download this API key - it is
+                      not intended to be secret. Google has security measures
+                      in place to ensure your key is not abused.
+                      <strong>It is not technically possible to make anything
+                      secret on the client-side</strong>.
+                  </li><br>
+                  <li>
+                      6. Write code required to display map markers identifying
+                      at least 5 locations that you are interested in within
+                      this neighborhood. Your app should display those
+                      locations by default when the page is loaded.
+                  </li><br>
+                  <li>
+                      7. Implement a list view of the set of locations defined
+                      in step 5.
+                  </li><br>
+                  <li>
+                      8. Provide a filter option that uses an input field to
+                      filter both the list view and the map markers displayed
+                      by default on load. The list view and the markers should
+                      update accordingly in real time. Providing a search
+                      function through a third-party API is not enough to meet
+                      specifications. This filter can be a text input or a
+                      dropdown menu.
+                  </li><br>
+                  <li>
+                      9. Add functionality using third-party APIs to provide
+                      information when a map marker or list view entry is
+                      clicked (ex: Yelp reviews, Wikipedia, Flickr images, etc).
+                      Note that StreetView and Places don't count as an
+                      additional 3rd party API because they are libraries
+                      included in the Google Maps API. If you need a refresher
+                      on making AJAX requests to third-party servers, check out
+                      our <a href="https://www.udacity.com/course/ud110-nd">
+                      Intro to AJAX</a> course. Please provide attribution to
+                      the data sources/APIs you use. For example if you are
+                      using Foursquare, indicate somewhere in your interface
+                      and in your README that you used Foursquare's API.
+                  </li><br>
+                  <li>
+                      10. Add functionality to animate a map marker when either
+                      the list item associated with it or the map marker itself
+                      is selected.
+                  </li><br>
+                  <li>
+                      11. Add functionality to open an infoWindow with the
+                      information described in step 9 (you can also populate
+                      a DOM element with this info, but you should still open
+                      an infoWindow, even with minimal info, like location name)
+                      when either a location is selected from the list view or
+                      its map marker is selected directly.
+                  </li><br>
+                  <li>
+                      12. The app's interface should be intuitive to use. For
+                      example, the input text area to filter locations should
+                      be easy to locate. It should be easy to understand what
+                      set of locations is being filtered. Selecting a location
+                      via list item or map marker should cause the map marker
+                      to bounce or in some other way animate to indicate that
+                      the location has been selected and associated info window
+                      should open above the map marker with additional
+                      information.
+                  </li><br>
+                  <li>
+                      Example: BART Locations San Francisco<br><br>
+                      <img class="img-responsive"
+                      src="../../images/bart_1.png"
+                      alt="bart map"><br>
+                      Clicking a marker on the map should open more information
+                      about that location.<br><br>
+                      <img class="img-responsive"
+                      src="../../images/bart_2.png"
+                      alt="bart map"><br>
+                      Clicking a name in the list view should open the
+                      information window for the associated marker.<br><br>
+                      <img class="img-responsive"
+                      src="../../images/bart_3.png"
+                      alt="bart map"><br>
+                      The list of locations should be filterable with a text
+                      input or dropdown menu. Filtering the list also filters
+                      the markers on the map.<br><br>
+                      <img class="img-responsive"
+                      src="../../images/bart_4.png"
+                      alt="bart map"><br>
+                      The web app should be mobile responsive - notice the
+                      hamburger menu icon used to hide the list on small
+                      screens (this is just one possible mobile
+                      implementation).<br><br>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <ol>
+              <li>
+                <h5>Helpful Resources</h5>
+                None of these are required, but they may be helpful.<br>
+                <ol>
+                  <li>
+                    <a href="https://developer.foursquare.com/start">
+                      Foursquare API</a>
+                  </li>
+                  <li>
+                    <a href="http://www.mediawiki.org/wiki/API:Main_page">
+                      MediaWikiAPI for Wikipedia</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/maps/documentation/javascript/streetview">
+                      Google Maps Street View Service</a>
+                  </li>
+                  <li>
+                    <a href="https://developers.google.com/maps/documentation/">
+                      Google Maps</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/udacity/fend-office-hours/tree/master/Javascript%20Design%20Patterns/P5%20Project%20Overview">
+                      Project 5 Overview WebCast</a>
+                  </li>
+                  <li>
+                    <a href="http://learn.knockoutjs.com/">
+                      Knockout JS Tutorials</a>
+                  </li>
+                  <li>
+                    <a href="http://todomvc.com/examples/knockoutjs/">Todo
+                      MVC Knockout Example</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h4> 3. A Note About Plagiarism </h4>
+              <ol>
+                <li>Neighborhood Map is a difficult project - that's on purpose.
+                  You'll be starting with a blank slate and will be designing
+                  the architecture of your app entirely on your own.</li>
+                <li><strong>PLEASE</strong> don't copy work from other students.
+                  We will find out and we will ask you to do the project again.
+                  If you do get stuck, here are some tips for how to seek out
+                  inspiration without violating the Honor Code:</li>
+                <ol>
+                  <li>Look at documentation and online tutorials FIRST.</li>
+                  <li>If you do look at another student's work for inspiration
+                      (on GitHub or elsewhere), don't copy it. Don't take any
+                      part of it and don't download it. Review it to understand
+                      their thought process.</li>
+                  <li>Reflect on their design choices - what are some of the
+                    tradeoffs of different decisions in their code?</li>
+                  <li>Take a break, if need be, as you figure out how you will
+                    implement your app. You have to write your own code so
+                    understanding one implementation of it but taking the time
+                    to think through your own implementation is extremely
+                    important for your own learning and in producing original
+                    work.</li>
+                  <li>Return to your code and write your own implementation.
+                  </li>
+                  <li>Cite any submissions you looked at to give credit where
+                    it is due.</li>
+                </ol>
+              </ol>
+
+            <h4> 4. Project: Neighborhood Map </h4>
+            <ol>
+              <li>
+                <h5>Project Submission</h5>
+                <ol>
+                  <li>You will develop a single-page application featuring a map
+                      of your neighborhood or a neighborhood you would like to
+                      visit. You will then add additional functionality to this
+                      application, including: map markers to identify popular
+                      locations or places you’d like to visit, a search function
+                      to easily discover these locations, and a listview to
+                      support simple browsing of all locations. You will then
+                      research and implement third-party APIs that provide
+                      additional information about each of these locations
+                      (such as StreetView images, Wikipedia articles, Yelp
+                      reviews, etc).</li>
+                </ol>
+              </li>
+              <li>
+                <h5>Evaluation</h5>
+                <ol>
+                  <li>Your project will be evaluated by a Udacity reviewer
+                      according to the Neighborhood Map Project
+                      <a href="../../images/P_Neighborhood_Map_Rubric.pdf">
+                      Rubric</a>. Be sure to review it thoroughly before you
+                      submit. All criteria must "meet specifications" in order
+                      to pass.</li>
+                </ol>
+              </li>
+              <li>
+                <h5>Submission</h5>
+                <ol>
+                  <li>1. If build tools (such as Gulp or Grunt) are used,
+                      submit both your source and production code in the same
+                      repository in separate directories. These directories are
+                      usually named <code>src</code> and <code>dist</code>
+                      respectively.
+                  </li>
+                  <li>2. If build tools are used the gulp or grunt.js file as
+                      well as the package.json file must be included in the
+                      submission.
+                  </li>
+                  <li>
+                      3. If build tools are used, the instructions for building
+                      the project and running the tool must be included in the
+                      README.md. You may find the short
+                      <a href="https://www.udacity.com/course/writing-readmes--ud777">
+                      Writing READMEs</a> course helpful.
+                  </li>
+                  <li>
+                      4. The node_modules directory may contain thousands of
+                      files and should not be contained in the submission. See
+                      the forum post
+                      <a href="https://discussions.udacity.com/t/how-to-remove-node-modules-directory-from-github-respository/40929">
+                      how to remove node_modules directory from
+                      Github repository</a> for instructions.
+                  </li>
+                  <li>
+                      5. The master branch is the default Github repository
+                      branch. If you wish to submit another branch, you'll need
+                      to set it as the
+                      <a href="https://help.github.com/articles/setting-the-default-branch/">new default branch
+                      inside your Github repository</a>.
+                  </li>
+                  <li>
+                      6. When you're ready to submit your project go back to
+                      your <a href="https://www.udacity.com/me">Udacity Home
+                      </a>, click on Project 5.1, and we'll walk you through the
+                      rest of the submission process. Due to the high volume of
+                      submissions we receive, please allow up up to <strong>7
+                      business days</strong> for your evaluation to be returned.
+                  </li>
+                  <li>
+                      7. If you are having any problems submitting your project
+                      or wish to check on the status of your submission, please
+                      email us at <strong>frontend-project@udacity.com</strong> or visit us in
+                      the <a href="http://discussions.udacity.com/">discussion
+                      forums</a>.
+                  </li>
+                </ol>
+                <li>
+                  <h5>What's Next?</h5>
+                  <ol>
+                    <li>
+                        You will get an email as soon as your reviewer has
+                        feedback for you. In the meantime, review your next
+                        project and feel free to get started on it or the
+                        courses supporting it! <br><br>
+
+                        <a href="https://review.udacity.com/#!/rubrics/5/start"><button type="button" class="btn btn-primary">
+                        Submit!</button></a><br>
+                    </li>
+              </li>
+            </li>
+
+        <!-- <ol><li></li></ol> -->
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
