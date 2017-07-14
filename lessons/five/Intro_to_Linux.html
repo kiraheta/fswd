@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/five.html"><span class="glyphicon glyphicon-circle-arrow-left" style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Intro to Linux  </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=axn-ni_NFoo"> 1. Introduction </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=wqXH_l0XBY0"> 2. What Is Linux </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=0h7RgeIQGiQ"> 3. Free As In Beer </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=qul6Zn-mcQA"> 4. Intro To Distributions </a></h4>
+            <h4> 5. Getting Started with Vagrant</h4>
+            <ol>
+              <li>
+                In this course we’ll be working with Ubuntu. It’s an excellent
+                distribution for a variety of use cases, including web servers.
+                We’ll run our Ubuntu server within a virtual machine, which is
+                a special piece of software running on your computer that acts
+                as if it is a stand-alone computer.<br><br>
+
+                To accomplish this requires a bit of setup but will give
+                everyone the same Linux environment to work within, even if
+                you’re on Windows or OSX currently.
+              </li>
+              <li>
+                <h4>Required Software</h4>
+                If you've already downloaded and installed these items, perhaps
+                while completing a different course, you do not need to
+                download and install these items again.<br><br>
+
+                1. Download and install <a href="https://www.virtualbox.org/">
+                VirtualBox</a>. This is free software that will run the
+                virtual machine.<br>
+                2. Download and install <a href="https://www.vagrantup.com/">
+                Vagrant</a>. This is an command line utility that makes it easy
+                to manage and access your virtual machines.<br>
+              </li>
+              <li>
+                <h4>Course Environment</h4>
+                Follow these steps to setup an environment where you can work
+                on this course:<br><br>
+
+                1. Create a new folder on your computer where you’ll store your
+                work for this course, then open that folder within your
+                terminal.<br>
+                2. Type <code>vagrant init ubuntu/trusty64</code> to tell
+                Vagrant what kind of Linux virtual machine you would like to
+                run.<br>
+                3. Type <code>vagrant up</code> to download and start running
+                the virtual machine<br>
+
+                This last step could take some time since the virtual machine
+                files can be quite large. For now, leave this window up and
+                continue the course. You’ll come back to this window later and
+                actually interact with your Linux machine a bit later.
+              </li>
+            </ol>
+            <h4><a href="https://www.youtube.com/watch?v=qipLzINilE4"> 6. Quiz: Linux Distribution Comparison </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=HeO6_pt3dM8">Solution</a></li></ol>
+            <h4> 7. Vagrant Commands </h4>
+            <ol>
+              <li>
+                We’re now ready to get started working within our Linux virtual
+                machine. If your download hasn’t completed from the initial
+                setup, go ahead and take a break and come back when that has
+                completed. You won’t be able to make further progress until
+                the virtual machine is up and running as much of the course
+                will take place within this environment.<br><br>
+
+                Before we access our machine, let’s quickly review a few
+                commands that vagrant provides to make managing your virtual
+                machines much simpler. Remember, your vagrant machine lives
+                within this specific folder on your computer so make sure
+                you’re within that same folder your created earlier; otherwise
+                these commands won’t work as expected.<br><br>
+              </li>
+              <li>
+                <code>vagrant status</code><br>
+                This command will show you the current status of the virtual
+                machine. It should currently read “default running (virtualbox)”
+                along with some other information.<br><br>
+              </li>
+              <li>
+                <code>vagrant suspend</code><br>
+                This command suspends your virtual machine. All of your work
+                is saved and the machine is put into a “sleep mode” of sorts.
+                The machines state is saved and it’s very quick to stop and
+                start your work. You should use this command if you plan to
+                just take a short break from your work but don’t want to leave
+                the virtual machine running.<br><br>
+              </li>
+              <li>
+                <code>vagrant up</code><br>
+                This gets your virtual machine up and running again. Notice we
+                didn’t have to redownload the virtual machine image, since it’s
+                already been downloaded.<br><br>
+              </li>
+              <li>
+                <code>vagrant ssh</code><br>
+                This command will actually connect to and log you into your
+                virtual machine. Once done you will see a few lines of text
+                showing various performance statistics of the virtual machine
+                along with a new command line prompt that reads
+                vagrant@vagrant-ubuntu-trusty-64:~$<br><br>
+              </li>
+              <li>
+                Here are a few other important commands that we’ll discuss but
+                you do not need to practice at this time:<br><br>
+              </li>
+              <li>
+                <code>vagrant halt</code><br>
+                This command halts your virtual machine. All of your work is
+                saved and the machine is turned off - think of this as
+                “turning the power off”. It’s much slower to stop and start
+                your virtual machine using this command, but it does free up
+                all of your RAM once the machine has been stopped. You should
+                use this command if you plan to take an extended break from
+                your work, like when you are done for the day. The command
+                vagrant up will turn your machine back on and you can continue
+                your work.
+              </li><br>
+              <li>
+                <code>vagrant destroy</code><br>
+                This command destroys your virtual machine. Your work is not
+                saved, the machine is turned off and forgotten about for the
+                most part. Think of this as formatting the hard drive of a
+                computer. You can always use vagrant up to relaunch the machine
+                but you’ll be left with the baseline Linux installation from
+                the beginning of this course. You should not have to use this
+                command at any time during this course unless, at some point in
+                time, you perform a task on the virtual machine that makes it
+                completely inoperable.
+              </li>
+            </ol>
+            <h4><a href="https://www.youtube.com/watch?v=TCTg12p_5i0"> 8. This Is Not Your Computer </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=teYTkvSLHbg"> 9. Where Are We </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=0RuDb_eh3W0"> 10. Quiz: Your Home Directory </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=WoL3riu2Xvc">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=2-OFEjHjwIM"> 11. Quiz: Users Home Directory </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=0ubMLyNXyYU">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=RWmvyWJrnvI"> 12. Other Important Directories </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=WJ3hQVWIHH0"> 13. Quiz: Traversing The File System </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=RZLeJoC-G5M">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=G8gSozyMfKA"> 14. Understanding $PATH </a></h4>
+            <ol><li><a href="http://askubuntu.com/questions/60218/how-to-add-a-directory-to-my-path">AskUbuntu: How to Update $PATH</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=_NU8OvbpRLs"> 15. Outro </a></h4>
+        </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
