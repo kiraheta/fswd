@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/five.html"><span class="glyphicon glyphicon-circle-arrow-left" style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Linux Security </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=PucDEG4ou_k"> 1. Intro To Linux Security  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=F-PlOomQkAs"> 2. The Rule Of Least Privilege  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=fC6eWTMslt4"> 3. Becoming A Super User  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=_nH4vpivD3Y"> 4. Sudo Vs. Su  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=MpDaWOUA-BY"> 5. Package Source Lists  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=BmiZxCkKwbo"> 6. Updating Available Package Lists  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=q-RRw3kD4MI"> 7. Upgrading Installed Packages </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=vBnEmhNZ04Y"> 8. Other Package Related Tasks  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=rlfAlDQzQEs"> 9. Discovering Packages  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=jeH4_AKgGls"> 10. Quiz: Using Package Search </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=lPP95ZbGZBU">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=lskID0MNWXY"> 11. Using Finger </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=McsfRuZq8vU"> 12. Introduction To /Etc/Passwd </a></h4>
+            <ol>
+              <li><code>/etc/passwd</code>
+                This is a very important file on your system! It's used to keep
+                track of all users on the system. Run
+                <code>cat /etc/passwd</code> and look at the output; each line
+                is organized in this format:<br><br>
+
+                <strong>username:password:UID:GID:UID info:home directory:command/shell</strong>
+              </li><br>
+              <li>Let’s run through what each of those mean:<br>
+                  1. <strong>username</strong>: the user’s login name<br>
+                  2. <strong>password</strong>: the password, will simply be an x if it’s encrypted<br>
+                  3. <strong>user ID (UID)</strong>: the user’s ID number in the system. 0 is root, 1-99 are for predefined users, and 100-999 are for other system accounts<br>
+                  4. <strong>group ID (GID)</strong>: Primary group ID, stored in /etc/group.<br>
+                  5. <strong>user ID info</strong>: Metadata about the user; phone, email, name, etc.<br>
+                  6. <strong>home directory</strong>: Where the user is sent upon login. Generally /home/<br>
+                  7. <strong>command/shell</strong>: The absolute path of a command or shell (usually /bin/bash). Does not have to be a shell though!<br>
+
+              </li>
+            </ol>
+            <h4><a href="https://www.youtube.com/watch?v=Ip14M8vb48M"> 13. Quiz: Reading /Etc/Passwd Entries </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=_OC7MKBukIw">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=tiCOY9Qoeps"> 14. Quiz: User Account Info </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=mnH-I-yjZ4c">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=DgFnxsFhUA0"> 15. Introduction To User Management </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=cprjSyaajqE"> 16. Creating A New User </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=bDpQxtVLTPw"> 17. Connecting As The New User </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=f28nZ2ubYFk"> 18. Introduction To Etc Sudoers </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=32u1qTPN5eQ"> 19. Giving Sudo Access </a></h4>
+            <ol><li><a href="https://help.ubuntu.com/community/Sudoers">Ubuntu Documentation: Sudoers</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=Xqw4Ajl9fzM"> 20. Quiz: Resetting Passwords </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=AoifNF8VPI0">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=NQUXLUm8Fug"> 21. Another Authentication Method </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=KuCt1GhzKJE"> 22. Public Key Encryption </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=afOCp8d60U8"> 23. Generating Key Pairs </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=Z9cJ6rnXNXY"> 24. Quiz: Supported Key Types </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=QzmiVAWlw-Y">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=k5JTVI6c7w8"> 25. Installing A Public Key </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=NOPYGp2Ixvs"> 26. Forcing Key Based Authentication </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=dN3u5bbyWvA"> 27. Introduction To File Permissions </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=Co-EWQM-eFU"> 28. Owners And Groups </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=5MyCuq_j7Wc"> 29. Quiz: Identifying Owners And Groups </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=TU92uFJNmFo">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=fwgX_mHeSJM"> 30. Octal Permissions [Missing Dialogue] </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=9_nXVxp4iz0"> 31. Quiz: Octal File Permissions </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=-amFiBpK5eY">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=IcSxrW5afBA"> 32. Chgrp And Chown </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=re_hW0AS1qA"> 33. Intro To Ports </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=N_bnwou-GYw"> 34. Quiz: Default Ports For Popular Services </a></h4>
+            <ol><li><a href="https://www.youtube.com/watch?v=jlRLiexlnSY">Solution</a></li></ol>
+            <h4><a href="https://www.youtube.com/watch?v=X_oydB2TeLQ"> 35. Intro To Firewalls </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=NYHrggI0wK0"> 36. Intro To UFW </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=n3PC04x09gc"> 37. Configuring Ports In UFW </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=HXvm69aqOQk"> 38. Conclusion </a></h4>
+            <ol>
+              <li>
+                Here are a few tutorials that will walk you through how to
+                configure your server in a variety of use cases:
+              </li>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04">"LAMP" Stack (Linux, Apache, MySQL, PHP)</a>
+              </li>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04">"LEMP" Stack (Linux, nginx, MySQL, PHP)</a>
+              </li>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-and-file-storage-with-peps-on-ubuntu-14-04">PEPS Mail and File Storage</a>
+              </li>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-with-mail-in-a-box-on-ubuntu-14-04">Mail-in-a-Box Email Server</a>
+              </li>
+              <li>
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-lita-chat-bot-for-irc-on-ubuntu-14-04">Lita IRC Chat Bot</a>
+              </li>
+            </ol>
+        </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
