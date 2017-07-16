@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/five.html"><span class="glyphicon glyphicon-circle-arrow-left" style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Linux Server Configuration </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+            <h4> 1. Project Overview </h4>
+              <p>
+                You will take a baseline installation of a Linux server and
+                prepare it to host your web applications. You will secure your
+                server from a number of attack vectors, install and configure a
+                database server, and deploy one of your existing web
+                applications onto it.
+              </p>
+              <h5>Why this Project?</h5>
+              <p>
+                A deep understanding of exactly what your web applications are
+                doing, how they are hosted, and the interactions between
+                multiple systems are what define you as a Full Stack Web
+                Developer. In this project, you’ll be responsible for turning
+                a brand-new, bare bones, Linux server into the secure and
+                efficient web application host your applications need.
+              </p>
+              <h5>What will I Learn?</h5>
+              <p>
+                You will learn how to access, secure, and perform the initial
+                configuration of a bare-bones Linux server. You will then learn
+                how to install and configure a web and database server and
+                actually host a web application.
+              </p>
+              <h5>How does this Help my Career?</h5>
+              <p>
+                1. Deploying your web applications to a publicly accessible server is the first step in getting users<br>
+                2. Properly securing your application ensures your application remains stable and that your user’s data is safe
+              </p>
+            <h4> 2. Project Details </h4>
+            <p>
+              This project is linked to the
+              <a href="https://classroom.udacity.com/courses/ud299">Configuring
+              Linux Web Servers</a> course, which teaches you to secure and set
+              up a Linux server. By the end of this project, you will have one
+              of your web applications running live on a secure web server.
+              <br><br>
+
+              To complete this project, you'll need a Linux server instance.
+              We recommend using <a href="https://lightsail.aws.amazon.com/">
+              Amazon Lightsail</a> for this. If you don't
+              already have an Amazon Web Services account, you'll need to set
+              one up. Once you've done that, here are the steps to complete
+              this project.
+            </p><br>
+            <h5>Get your server.</h5>
+            <p>
+              1. Start a new Ubuntu Linux server instance on Amazon Lightsail.
+              There are full details on setting up your Lightsail instance on
+              the next page.<br>
+              2. Follow the instructions provided to SSH into your server.
+            </p><br>
+            <h5>Secure your server.</h5>
+            <p>
+              3. Update all currently installed packages.<br>
+              4. Change the SSH port from <strong>22</strong> to <strong>
+              2200</strong>. Make sure to configure
+              the Lightsail firewall to allow it.<br>
+              5. Configure the Uncomplicated Firewall (UFW) to only allow
+              incoming connections for SSH (port 2200), HTTP (port 80), and
+              NTP (port 123).
+            </p><br>
+            <p><span style="color: red;">Warning</span>: When changing the SSH
+              port, make sure that the firewall is open for port 2200 first,
+              so that you don't lock yourself out of the server.
+              <a href="https://classroom.udacity.com/nanodegrees/nd004/parts/ab002e9a-b26c-43a4-8460-dc4c4b11c379/modules/357367901175461/lessons/4331066009/concepts/48010894990923">
+              Review this video </a> for details! When you change the
+              SSH port, the Lightsail instance will no longer be accessible
+              through the web app 'Connect using SSH' button. The button
+              assumes the default port is being used. There are instructions on
+              the same page for connecting from your terminal to the instance.
+              Connect using those instructions and then follow the rest of the
+              steps.
+            </p><br>
+            <h5>Give <code>grader</code> access.</h5>
+            <p>
+              In order for your project to be reviewed, the grader needs to be
+              able to log in to your server.<br><br>
+
+              6. Create a new user account named grader.<br>
+              7. Give grader the permission to sudo.<br>
+              8. Create an SSH key pair for grader using the ssh-keygen tool.<br>
+            </p>
+            <h5>Prepare to deploy your project.</h5>
+            <p>
+              9. Configure the local timezone to UTC.<br>
+              10. Install and configure Apache to serve a Python mod_wsgi
+              application.<br>
+              11. Install and configure PostgreSQL:<br>
+              <ol>
+                <li>Do not allow remote connections</li>
+                <li>Create a new database user named catalog that has limited
+                  permissions to your catalog application database.</li>
+              </ol>
+
+              12. Install git.
+            </p>
+            <h5>Deploy the Item Catalog project.</h5>
+            <p>
+              13. Clone and setup your <strong>Item Catalog</strong> project from
+              the Github repository you created earlier in this Nanodegree
+              program.<br>
+              14. Set it up in your server so that it functions correctly when
+              visiting your server’s IP address in a browser. Make sure that
+              your <code>.git</code> directory is not publicly accessible via a
+              browser!
+            </p>
+            <h4> 3. Get started on Lightsail </h4>
+            <p>
+              We're recommending <a href="https://lightsail.aws.amazon.com/">
+              Amazon Lightsail</a> for this project. If you
+              prefer, you can use any other service that gives you a publicly
+              accessible Ubuntu Linux server. But Lightsail works pretty well
+              and it's what we've tested.
+            </p>
+            <h4> 4. Webcasts for the Linux Server Configuration Project </h4>
+            <p>
+              Need some additional help getting started with the Linux Server
+              Configuration Project, or simply curious and want to learn a
+              little bit more? Watch the following Webcasts!<br><br>
+
+              These webcasts are recordings of live Q&A sessions and demos. As
+              always, you should read the appropriate rubric for your project
+              thoroughly before you begin work on any project and double check
+              the rubric before submitting. The videos were made by Udacity's
+              coaches. Think of them as extra supplemental materials.<br><br>
+            </p>
+            <p>
+              The webcasts for the Linux Server Configuration Project include:
+            </p>
+            <ol>
+              <li><a href="https://www.youtube.com/watch?v=HcwK8IWc-a8">SSH: How to access a remote server and edit files</a></li>
+              <li><a href="https://www.youtube.com/watch?v=hZ0cUWWixqU">Intro to TMux</a></li>
+              <li><a href="https://www.youtube.com/watch?v=5UNAy4GzQ5E">Deploying a Flask App with Heroku</a></li>
+            </ol>
+            <p>Happy Learning!</p>
+            <h4> 5. Project Submission </h4>
+            <p>
+              You will take a baseline installation of a Linux distribution on
+              a virtual machine and prepare it to host your web applications,
+              to include installing updates, securing it from a number of
+              attack vectors and installing/configuring web and database
+              servers.<br><br>
+            </p>
+            <h5>Evaluation</h5>
+            <p>
+              Your project will be evaluated by a Udacity Code Reviewer
+              according to the rubric below. Be sure to review it thoroughly
+              before you submit. All criteria must "meet specifications" in
+              order to pass.<br><br>
+
+              Click here to view the
+              <a href="../../images/P_Linux_Config_Rubric.pdf">rubric</a>
+            </p>
+            <h5>Submission</h5>
+            <p>Please follow these steps to properly submit this project:</p>
+            <p>
+              1. Create a new GitHub repository and add a file named
+              <code>README.md</code>.
+              <br>
+              Your README.md file should include <strong>all</strong> of the following:<br>
+              i. The IP address and SSH port so your server can be accessed by the reviewer.<br>
+              ii. The complete URL to your hosted web application.<br>
+              iii. A summary of software you installed and configuration changes made.<br>
+              iv. A list of any third-party resources you made use of to complete this project.<br>
+              Locate the SSH key you created for the <code>grader</code> user.<br>
+              During the submission process, paste the contents of the <code>grader</code> user's SSH key into the "Notes to Reviewer" field.<br>
+            </p>
+            <p>
+              When you're ready to submit your project, click
+              <a href="https://review.udacity.com/#!/projects/3573679011">here
+              </a> and follow the instructions. Due to the high volume of
+              submissions we receive, please allow up up to
+              <strong>7 business days</strong> for your
+              evaluation to be returned.<br><br>
+
+              If you are having any problems submitting your project or wish to
+              check up on the status of your evaluation, please email us at
+              <strong>fullstack-project@udacity.com</strong>.
+            </p>
+            <h5>Next Steps</h5>
+            <p>
+              You will get an email as soon as your reviewer has
+              feedback for you. Congratulations on making it this far in
+              the Nanodegree! You're almost finished! <br><br>
+
+              <a href="https://review.udacity.com/#!/rubrics/5/start"><button type="button" class="btn btn-primary">
+              Submit!</button></a><br>
+            </p>
+        </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+  </body>
+</html>
