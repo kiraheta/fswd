@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/two.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> HTTP in the Real World </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4><a href="https://www.youtube.com/watch?v=EV10W-LUwxA"> 1. Deploying to a hosting service </a></h4>
+            <h5>Steps to deployment</h5>
+            <p>Here's an overview of the steps you'll need to complete. We'll
+              be going over each one in more detail.</p>
+            <ol>
+              <li>
+                1. Check your server code into a new local Git repository.
+              </li><br>
+              <li>
+                2. Sign up for a free Heroku account.<br><br>
+                First, visit this link and follow the instructions to sign up
+                for a free Heroku account:<br>
+                <a href="https://signup.heroku.com/dc">
+                  https://signup.heroku.com/dc</a><br>
+                  Make sure to write down your username and password!
+              </li><br>
+              <li>
+                3. Download the Heroku
+                <a href="https://devcenter.heroku.com/articles/heroku-cli">
+                  command-line interface </a> (CLI).<br><br>
+                Once you have it installed, the heroku command will be
+                available in your shell.<br><br>
+
+                From the command line, use <code>heroku login</code> to authenticate to
+                Heroku. It will prompt you for your username and password;
+                use the ones that you just set up when you created your
+                account. This command will save your authentication information
+                in a hidden file (<code>.netrc</code>) so you will not need to ender your
+                password again on the same computer.
+              </li><br>
+              <li>
+                4. Authenticate the Heroku CLI with your account:
+                <code>heroku login</code>
+              </li><br>
+              <li>
+                5. Create configuration files <code>Procfile</code>, <code>
+                requirements.txt</code>, and <code>runtime.txt</code><br><br>
+
+                <code>runtime.txt</code> tells Heroku what version of Python
+                you want to run. Check the currently supported runtimes in
+                the
+                <a href="https://devcenter.heroku.com/articles/python-runtimes">
+                  Heroku documentation</a>; this will change over time! As of
+                early 2017, the currently supported version of Python 3 is
+                <code>python-3.6.0</code>; so this file just needs to contain
+                the text <code>python-3.6.0</code>.<br><br>
+
+                <code>requirements.txt</code> is used by Heroku (through
+                <code>pip</code>)
+                to install dependencies of your application that aren't in
+                the Python standard library. The bookmark server has one of
+                these: the <code>requests</code> module. We'd like a recent
+                version of that, so this file can contain the text
+                <code>requests>=2.12</code>. This will install version 2.12 or
+                a later version, if one has been released.<br><br>
+
+                <code>Procfile</code> is used by Heroku to specify the
+                command line for running your application. It can support
+                running multiple servers, but in this case we're only going
+                to run a web server. Check the Heroku documentation about
+                process types for more details. If your bookmark server is in
+                <code>BookmarkServer.py</code>, then the contents of
+                Procfile should be <code>web: python BookmarkServer.py
+                </code>.<br><br>
+
+                Create each of these files in the same directory as your code,
+                and commit them all to your Git repository.
+              </li><br>
+              <li>
+                6. Modify your server to listen on a configurable port.<br><br>
+
+                There's one small change that you have to make to your server
+                code to make it run on Heroku. The bookmark server from Lesson
+                2 listens on port 8000. But Heroku runs many users' processes
+                on the same computer, and multiple processes can't (normally)
+                listen on the same port. So Heroku needs to be able to tell
+                your server what port to listen on.<br><br>
+
+                The way it does this is through an environment variable —
+                a configuration variable that is passed to your server from the
+                program that starts it, usually the shell. Python code can
+                access environment variables in the <code>os.environ dictionary.
+                </code> The names of environment variables are usually
+                capitalized; and the environment variable we need here is
+                called, unsurprisingly, <code>PORT</code>.
+
+                The port your server listens on is configured when it creates
+                the <code>HTTPServer</code> instance, near the bottom of the
+                server code. We can make it work with or without the <code>PORT
+                </code> environment variable, like so:<br><br>
+
+                <code>
+                if __name__ == '__main__':<br>
+                    port = int(os.environ.get('PORT', 8000))   # Use PORT if it's there.<br>
+                    server_address = ('', port)<br>
+                    httpd = http.server.HTTPServer(server_address, Shortener)<br>
+                    httpd.serve_forever()
+                </code><br><br>
+
+                To access <code>os.environ</code>, you will also need to
+                <code>import os</code> at the top of the file.<br><br>
+
+                Make these changes to your server code, run the server locally
+                to test that it still works, then commit it to your Git
+                repository:<br><br>
+
+                git add BookmarkServer.py<br>
+                git commit -m "Use PORT from environment."<br>
+              </li><br>
+              <li>
+                7. Create your Heroku app: <code>heroku create
+                  your-app-name</code><br><br>
+
+                  Before you can put your service on the web, you have to give
+                  it a name. You can call it whatever you want, as long as the
+                  name is not already taken by another user! Your app's name
+                  will appear in the URI of your deployed service. For
+                  instance, if you name your app <code>silly-pony</code>, it
+                  will appear on the web at <code>
+                  https://silly-pony.herokuapp.com/</code>.<br><br>
+
+                  Use <code>heroku create your-app-name</code> to tell Heroku
+                  about your app and give it a name. Again, you can choose any
+                  name you like, but it will have to be unique — the service
+                  will tell you if you're choosing a name that someone else
+                  has already claimed.<br><br>
+
+                  Finally, use <code>git push heroku master</code> to deploy
+                  your app!<br><br>
+              </li><br>
+              <li>
+                8. Push your code to Heroku with Git: <code>git push heroku
+                  master</code>
+              </li><br>
+            </ol>
+          <h4><a href="https://www.youtube.com/watch?v=PqD1YN-pQ1g"> 2. Handling more requests </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=_6JAlwW3E7o"> 3. What's an Apache or NGINX? </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=433Qt1pIegU"> 4. Cookies </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=3mcIibq61wA"> 5. HTTPS for Security </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=CVDXOxVp0fw"> 6. Beyond GET and POST </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=9e8uLYOXTjA"> 7. New developments in HTTP</a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=Zyn9jf9WpVM"> 8. Keep Learning </a></h4>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
