@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Career_Full_Stack_Interview_Practice.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> List-Based Collections </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4><a href="https://www.youtube.com/watch?v=cZORvZq-tI0"> 1. Welcome To Collections </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=KUQSgUMtyv0"> 2. Lists </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=OnPP5xDmFv0"> 3. Arrays </a></h4>
+          <h4> 4. Quiz: Python Lists</h4>
+          <p>
+            Python has an interesting data stucture called a "list" that is
+            much more than a mere list. In fact, a Python list actually
+            encompasses the functionality of almost every list-based data
+            structure in this lesson.
+          </p>
+          <p>
+            Behind the scenes a Python list is built as an array. Even though
+            you can do many operations on a Python list with just one line of
+            code, there's a lot of code built in to the Python language running
+            to make that operation possible.
+          </p>
+          <p>
+            For example, inserting into a list is easy (happens in constant
+            time). However, inserting into an array is O(n), since you may need
+            to shift elements to make space for the one you're inserting, or
+            even copy everything to a new array if you run out of space. Thus,
+            inserting into a Python list is actually O(n), while operations
+            that search for an element at a particular spot are O(1). You can
+            see the runtime of other list operations
+            <a href="https://wiki.python.org/moin/TimeComplexity">here</a>.
+          </p>
+          <p>
+            Python is a "higher level" programming language, so you can
+            accomplish a task with little code. However, there's a lot of code
+            built into the infrastructure in this way that causes your code to
+            actually run much more slowly than you'd think. Keep this in the
+            back of your mind when using Python. You likely won't need to know
+            the details of how Python works behind the scenes in a programming
+            interview, but you'll seem very impressive if you do!
+          </p>
+          <p>
+            If you aren't already comfortable with Python lists, you can look
+            through this lesson about basic Python list manipulation.
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=zxkpZrozDUk"> 5. Linked Lists </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=ZONGA5wmREI"> 6. Linked Lists In Depth </a></h4>
+          <h4><a href=""> 7. Quiz: Linked List Practice </a></h4>
+          <p>
+            This code is very similar—we're just establishing that a
+            <code>LinkedList</code> is something that has a
+            <code>head Element</code>, which is the first element in the list.
+            If we establish a new <code>LinkedList</code> without a
+            <code>head</code>, it will default to <code>None</code>.
+          </p>
+          <p>Great! Let's add a method to our <code>LinkedList</code> to make
+            it a little more useful. This method will add a new
+            <code>Element</code> to the end of our <code>LinkedList</code>.
+          </p>
+          <pre style="display: inline-block; width: 100%;
+          ">
+            <code class="language-python">
+<!--       --> def append(self, new_element):
+<!--       -->     current = self.head
+<!--       -->     if self.head:
+<!--       -->         while current.next:
+<!--       -->             current = current.next
+<!--       -->         current.next = new_element
+<!--       -->     else:
+<!--       -->         self.head = new_element
+            </code></pre>
+          <p>
+            Again, this part is really important, so don't rush through it.
+            Take the code line-by-line and make sure everything makes sense.
+            If the <code>LinkedList</code> already has a <code>head</code>,
+            iterate through the <code>next</code> reference in every
+            <code>Element</code> until you reach the end of the list. Set
+            <code>next</code> for the end of the list to be the
+            <code>new_element</code>. Alternatively, if there is no
+            <code>head</code> already, you should just assign
+            <code>new_element</code> to it and do nothing else.
+          </p>
+
+          <h4><a href="https://www.youtube.com/watch?v=DQoCO8aGcNc"> 8. Stacks </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=HpaVHzDeZC4"> 9. Stacks Details </a></h4>
+          <h4> 10. Quiz: Stack Practice </h4>
+          <p>
+            Remember that wonderful Python list we talked about eariler? It
+            turns out that stack functionality is already built into it!
+          </p>
+          <p>
+            The
+            <a href="https://docs.python.org/2/tutorial/datastructures.html#using-lists-as-stacks">
+            Python documentation</a> shows how you can use built-in funtions to
+            turn your Python list into a stack. <code>pop()</code> is a given
+            function, and <code>append()</code> is equivalent to a push
+            function.
+          </p>
+          <p>
+            Of course, this functionality makes stack manipulation in Python
+            all too easy. Let's make our own <code>Stack</code> class to see
+            how a stack really works under the hood.
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=XAbzlilAHZw"> 11. Queues </a></h4>
+          <h4> 12. Quiz: Queue Practice </h4>
+          <p>
+            Let's look at implementing queues in Python. Queue's are mentioned
+            in
+            <a href="https://docs.python.org/2/tutorial/datastructures.html#using-lists-as-queues">
+            Python's documentation</a>. Examine the code below:
+          </p>
+          <pre style="display: inline-block; width: 100%;
+          ">
+            <code class="language-python">
+              from collections import deque
+            </code></pre>
+            <p>
+              From a library called <code>collections</code>, you can import a
+              package called <code>deque</code>. As was mentioned in the video,
+              a deque is a double-ended queue. You can enqueue on either end,
+              but in the example you only enqueue one way and treat it as a
+              normal queue.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
