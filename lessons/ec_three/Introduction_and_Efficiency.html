@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Career_Full_Stack_Interview_Practice.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Introduction and Efficiency </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4><a href="https://www.youtube.com/watch?v=NKBUbUiedzc"> 1. Introduction </a></h4>
+          <h4> 2. Course Outline</h4>
+            <ol>
+              <li>Introduction and Efficiency</li>
+              <ul>
+                <li>Course Introduction</li>
+                <li>Syntax</li>
+                <li>Efficiency</li>
+                <li>Notation of Efficiency</li>
+              </ul>
+              <li>List-Based Collections</li>
+              <ul>
+                <li>Lists/Arrays</li>
+                <li>Linked Lists</li>
+                <li>Stacks</li>
+                <li>Queues</li>
+              </ul>
+              <li>Searching and Sorting</li>
+              <ul>
+                <li>Binary Search</li>
+                <li>Recursion</li>
+                <li>Bubble Sort</li>
+                <li>Merge Sort</li>
+                <li>Quick Sort</li>
+              </ul>
+              <li>Maps and Hashing</li>
+              <ul>
+                <li>Maps</li>
+                <li>Hashing</li>
+                <li>Collisions</li>
+                <li>Hashing Conventions</li>
+              </ul>
+              <li>Trees</li>
+              <ul>
+                <li>Trees</li>
+                <li>Tree Traversal</li>
+                <li>Binary Trees</li>
+                <li>Binary Search Trees</li>
+                <li>Heaps</li>
+                <li>Self-Balancing Trees</li>
+              </ul>
+              <li>Graphs</li>
+              <ul>
+                <li>Graphs</li>
+                <li>Graph Properties</li>
+                <li>Graph Representation</li>
+                <li>Graph Traversal</li>
+                <li>Graph Paths</li>
+              </ul>
+              <li>Case Studies in Algorithms</li>
+              <ul>
+                <li>Graphs</li>
+                <li>Shortest Path Problem</li>
+                <li>Knapsack Problem</li>
+                <li>Traveling Salesman Problem</li>
+              </ul>
+              <li>Technical Interview Tips</li>
+              <ul>
+                <li>Mock Interview Breakdown</li>
+                <li>Additional Tips</li>
+                <li>Practice with Pramp</li>
+                <li>Next Steps</li>
+              </ul>
+            </ol>
+          <h4> 3. Quiz: Course Expectations </h4>
+          <h4><a href="https://www.youtube.com/watch?v=08M93RaBSgU"> 4. Syntax </a></h4>
+          <h4><a href=""> 5.Quiz: Python Practice  </a></h4>
+            <p>
+              Please check off the following topics to confirm that you already
+              understand them! You're only expected to understand the basics of
+              how to manipulate them—details about usage will be explained
+              later if needed. If anything looks unfamiliar, you can check out
+              one of our introductory Python classes. This course will also
+              default to Python 2 where applicable, though it's very similar to
+              Python 3!
+            </p>
+            <h5 style="color:tomato;">Comments</h5>
+            <pre style="display: inline-block; width: 100%;">
+              <code class="language-python">
+<!--      --> # This is a one-line Python comment - code blocks are so useful!<br>
+<!--      -->  """This type of comment is used to document the purpose of functions and classes."""
+            </code></pre>
+            <h5 style="color:tomato;">Declaration/Initialization</h5>
+            <pre style="display: inline-block; width: 100%;
+            ">
+              <code class="language-python">
+<!--      --> # Remember values, not variables, have data types.
+<!--      --> # A variable can be reassigned to contain a different data type.
+<!--      --> answer = 42
+<!--      --> answer = "The answer is 42."
+              </code></pre>
+            <h5 style="color:tomato;">Data Types</h5>
+            <pre style="display: inline-block; width: 100%;
+            ">
+              <code class="language-python">
+<!--        --> boolean = True
+<!--        --> number = 1.1
+<!--        --> string = "Strings can be declared with single or double quotes."
+<!--        --> list = ["Lists can have", 1, 2, 3, 4, "or more types together!"]
+<!--        --> tuple = ("Tuples", "can have", "more than", 2, "elements!")
+<!--        --> dictionary = {'one': 1, 'two': 2, 'three': 3}
+<!--        --> variable_with_zero_data = None
+              </code></pre>
+            <h5 style="color:tomato;">Simple Logging</h5>
+            <pre style="display: inline-block; width: 100%;
+            ">
+              <code class="language-python">
+<!--        --> print "Printed!"
+              </code></pre>
+            <h5 style="color:tomato;">Conditionals</h5>
+            <pre style="display: inline-block; width: 100%;
+            ">
+              <code class="language-python">
+<!--          --> if cake == "delicious":
+<!--          -->     return "Yes please!"
+<!--          --> elif cake == "okay":
+<!--          -->     return "I'll have a small piece."
+<!--          --> else:
+<!--          -->     return "No, thank you."
+              </code></pre>
+            <h5 style="color:tomato;">Loops</h5>
+            <pre style="display: inline-block; width: 100%;
+            ">
+              <code class="language-python">
+<!--          --> for item in list:
+<!--          -->     print item
+
+<!--          --> while (total < max_val):
+<!--          -->     total += values[i]
+<!--          -->     i += 2
+              </code></pre>
+              <h5 style="color:tomato;">Functions</h5>
+              <pre style="display: inline-block; width: 100%;
+              ">
+                <code class="language-python">
+<!--            --> def divide(dividend, divisor):
+<!--            -->    quotient = dividend / divisor
+<!--            -->    remainder = dividend % divisor
+<!--            -->    return quotient, remainder
+
+<!--            -->def calculate_stuff(x, y):
+<!--            -->    (q, r) = divide(x,y)
+<!--            -->    print q, r
+                </code></pre>
+              <h5 style="color:tomato;">Classes</h5>
+              <pre style="display: inline-block; width: 100%;
+              ">
+                <code class="language-python">
+<!--            --> class Person(object):
+<!--            -->    def __init__(self, name, age):
+<!--            -->        self.name = name
+<!--            -->        self.age = age
+
+<!--            -->    def birthday(self):
+<!--            -->        self.age += 1
+                </code></pre>
+              <p>
+                You shouldn't need to run Python code outside the classroom,
+                so don't worry if you don't have a development environment set
+                up!
+              </p>
+          <h4><a href="https://www.youtube.com/watch?v=I-RASDPbDrI"> 6. Efficiency </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=xHwIU4j3gBc"> 7. Notation Intro </a></h4>
+          <p>At 2:07 I say "since 2 is the number of letters in our input
+            string". I mean "since n is the number of letters in our input
+            string".
+          </p>
+          <p>
+            Also, don't worry about immediately understanding all of the
+            notation examples at 0:45—they'll be explained soon or in later
+            lessons!
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=ZeGnkrKZWBQ"> 8. Notation Continued </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=ZYcmui02J40"> 9. Worst Case And Approximation </a></h4>
+          <p>Note that anything that can be approximated to O(n) can be said to
+            occur "in linear time". If you plotted n = y on a graph, it would
+            be a line. You can read about other possible time complexities
+            <a href="https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities">
+              here</a>.</p>
+          <h4> 10. Quiz: Efficiency Practice </h4>
+          <p>
+            Below are some examples of functions in Python. Look at each and
+            take note of the time efficiency. Then, in the quiz, enter those
+            values using the correct notation. Use approximations wherever
+            possible!
+          </p>
+          <pre style="display: inline-block; width: 100%;
+          ">
+            <code class="language-python">
+<!--            --> """input manatees: a list of "manatees", where one manatee is represented by a dictionary
+<!--            -->  a single manatee has properties like "name", "age", et cetera
+<!--            -->  n = the number of elements in "manatees"
+<!--            -->  m = the number of properties per "manatee" (i.e. the number of keys in a manatee dictionary)"""
+
+<!--            -->  def example1(manatees):
+<!--            -->      for manatee in manatees:
+<!--            -->          print manatee['name']
+
+<!--            -->  def example2(manatees):
+<!--            -->      print manatees[0]['name']
+<!--            -->      print manatees[0]['age']
+
+<!--            -->  def example3(manatees):
+<!--            -->      for manatee in manatees:
+<!--            -->          for manatee_property in manatee:
+<!--            -->              print manatee_property, ": ", manatee[manatee_property]
+
+<!--            -->  def example4(manatees):
+<!--            -->      oldest_manatee = "No manatees here!"
+<!--            -->      for manatee1 in manatees:
+<!--            -->          for manatee2 in manatees:
+<!--            -->              if manatee1['age'] < manatee2['age']:
+<!--            -->                  oldest_manatee = manatee2['name']
+<!--            -->              else:
+<!--            -->                  oldest_manatee = manatee1['name']
+<!--            -->      print oldest_manatee
+            </code></pre>
+            <p>
+              Here are the answers and explanations:
+            </p>
+            <h5>Example 1</h5>
+            <p>
+              We iterate over every <code>manatee</code> in the
+              <code>manatees</code> list with the for
+              loop. Since we're given that manatees has n elements, our code
+              will take approximately O(n) time to run.
+            </p>
+            <h5>Example 2</h5>
+            <p>
+              We look at two specific properties of a specific
+              <code>manatee</code>. We
+              aren't iterating over anything - just doing constant-time lookups
+              on lists and dictionaries. Thus the code will complete in
+              constant, or O(1), time.
+            </p>
+            <h5>Example 3</h5>
+            <p>
+              There are two for loops, and nested for loops are a good sign
+              that you need to multiply two runtimes. Here, for every <code>
+              manatee</code>, we check every property. If we had 4 <code>
+              manatees</code>, each with 5 properties, then we would need
+              5+5+5+5 steps. This logic simplifies to the number of <code>
+              manatees</code> times the number of properties, or O(nm).
+            </p>
+            <h5>Example 4</h5>
+            <p>
+              Again we have nested for loops. This time we're iterating over
+              the <code>manatees</code> list twice - every time we see a
+              <code>manatee</code>, we compare
+              it to every other <code>manatee</code>'s age. We end up with
+              O(nn), or O(n^2)
+              (which is read as "n squared").
+            </p>
+            <p>
+              Throughout the course, you can reference the
+              <a href="http://bigocheatsheet.com/">Big-O Cheat Sheet</a> to 
+              keep track of time complexities for many of the algorithms and
+              data structures we study.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
