@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Career_Full_Stack_Interview_Practice.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Searching and Sorting </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4><a href="https://www.youtube.com/watch?v=0VN5iwEyq4c"> 1. Binary Search </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=7WbRB7dSyvc"> 2. Efficiency Of Binary Search </a></h4>
+          <h4> 3. Quiz: Binary Search Practice </h4>
+          <p>
+            Searches and sorts can be very hard to visualize and understand.
+            If you need, go through the video a few more times until it really
+            sinks in.
+            <a href="http://www.cs.armstrong.edu/liang/animation/web/BinarySearch.html">
+              Here</a> is a supplementary visualization that might help as
+            well!
+          </p>
+          <p>
+            Python lists have a method called <code>index()</code>, which just
+            does a search and returns the first index with an instance of that
+            value. Next, you're going to write a binary search function that
+            has the same result, but searches faster. Keep in mind the
+            constraint for this exercise—for binary search, elements need to be
+            in increasing order.
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=_aI2Jch6Epk"> 4. Recursion </a></h4>
+          <h4> 5. Quiz: Recursion Practice </h4>
+          <p>
+            We're going to take a look at recursion with a famous example—
+            the Fibonacci Sequence.
+          </p>
+          <p>
+            The Fibonacci Sequence follows one rule: get the next number in the
+            sequence by adding the two previous numbers. Here is an example of
+            the sequence:
+          </p>
+          <p>
+            0,1,1,2,3,5,8,13,21,34...
+          </p>
+          <p>
+            Step through each value. You start with 0 and 1. 0 + 1 = 1, so you
+            add 1 to the sequence. 1 + 1 = 2, so 2 is added. 1 + 2 = 3,
+            so 3. 2 + 3 = 5, et cetera.
+          </p>
+          <p> Recursive Solution </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--      --> def get_fib(position):
+<!--      -->     if position == 0 or position == 1:
+<!--      -->         return position
+<!--      -->     return get_fib(position - 1) + get_fib(position - 2)
+                </code></pre>
+          <h4><a href="https://www.youtube.com/watch?v=Z6yuIen71zM"> 6. Intro To Sorting </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=h_osLG3GmjE"> 7. Bubble Sort </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=KddkHygi7is"> 8. Efficiency Of Bubble Sort </a></h4>
+          <h4><a href=""> 9. Quiz: Bubble Sort Practice </a></h4>
+          <p>
+            Sorting techniques can be tricky—sometimes the best way to
+            understand them is to watch a visual of a sorting algorithm in
+            action again and again. When I was first learning sorting, I used t
+            o check out the Wikipedia page for each sort. There's normally some
+            colorful illustration near the top, then a GIF showing the sort in
+            action. There are plenty of other visualizations on the World Wide
+            Web—take the time to look around if you need it!
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=K916wfSzKxE"> 10. Merge Sort </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=HKiK5Y-YSkk"> 11. Efficiency Of Merge Sort </a></h4>
+          <h4><a href=""> 12. Quiz: Merge Sort Practice </a></h4>
+          <p>
+            Sorting is pretty tedious—take a break and check out
+            <a href="https://xkcd.com/1185/">this comic</a> inspired by merge
+            sort.
+          </p>
+          <p>
+            You can learn more about merge sort, as well as see many more
+            visualizations, in the online
+            <a href="http://algs4.cs.princeton.edu/22mergesort/">Algorithms
+            textbook</a>. This book is often nice for a more in-depth analysis
+            of topics, but beware—all of the examples are in Java! For merge
+            sort, it's particularly worth reading up on top-down and bottom-up
+            merge sort.
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=kUon6854joI"> 13. Quick Sort </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=aMb5GHPGQ1U"> 14. Efficiency Of Quick Sort </a></h4>
+          <h4> 15. Quiz: Quick Sort Practice</h4>
+          <p><a href="https://visualgo.net/en/sorting?slide=1">Sorting Algorithms in Practice</a></p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
