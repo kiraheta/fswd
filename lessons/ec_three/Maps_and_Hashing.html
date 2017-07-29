@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Career_Full_Stack_Interview_Practice.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Maps and Hashing </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4><a href="https://www.youtube.com/watch?v=JEw3iQAnGKQ"> 1. Introduction To Maps </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=gmIb-qZhTDQ"> 2. Sets And Maps </a></h4>
+          <h4> 3. Quiz: Python Dictionaries </h4>
+          <p>
+            In Python, the map concept appears as a built-in data type called a
+            dictionary. A dictionary contains key-value pairs. Dictionaries
+            might soon become your favorite data structure in Python—they're
+            extremely easy to use and useful. Here's a sample of setting up a
+            dictionary
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  udacity = {}
+<!--   -->  udacity['u'] = 1
+<!--   -->  udacity['d'] = 2
+<!--   -->  udacity['a'] = 3
+<!--   -->  udacity['c'] = 4
+<!--   -->  udacity['i'] = 5
+<!--   -->  udacity['t'] = 6
+<!--   -->  udacity['y'] = 7
+
+<!--   -->  print udacity
+<!--   -->  # {'u': 1, 'd': 2, 'a': 3, 'c': 4, 'i': 5, 't': 6, 'y': 7}
+          </code></pre>
+          <p>
+            In this case, the letters in "udacity" were each keys in our
+            dictionary, and the position of that letter in the string was the
+            value. Thus, I can do the following:
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  print udacity['t']
+<!--   -->  # 6
+          </code></pre>
+          <p>
+            This statement is saying "go to the key labeled 't' and find
+            it's value, 6".
+          </p>
+          <p>
+            Dictionaries are wonderfully flexible—you can store a wide variety
+            of structures as values. You store another dictionary or a list:
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  dictionary = {}
+<!--   -->  dictionary['d'] = [1]
+<!--   -->  dictionary['i'] = [2]
+<!--   -->  dictionary['c'] = [3]
+<!--   -->  dictionary['t'] = [4]
+<!--   -->  dictionary['i'].append(5)
+<!--   -->  dictionary['o'] = [6]
+<!--   -->  dictionary['n'] = [7]
+<!--   -->  dictionary['a'] = [8]
+<!--   -->  dictionary['r'] = [9]
+<!--   -->  dictionary['y'] = [10]
+<!--   -->  print udacity
+<!--   -->  # {'d': [1], 'i': [2, 5], 'c': [3], 't': [4], 'o': [6], 'n': [7], 'a': [8], 'r': [9], 'y':[10]}
+          </code></pre>
+          <p>
+            You can learn even more about dictionaries in the
+            <a href="https://docs.python.org/2/tutorial/datastructures.html#dictionaries">
+              Python documentation</a>.
+          </p>
+          <p>
+            Example:
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  locations = {'North America': {'USA': ['Mountain View']}}
+<!--   -->  locations['North America']['USA'].append('Atlanta')
+<!--   -->  locations['Asia'] = {'India': ['Bangalore']}
+<!--   -->  locations['Asia']['China'] = ['Shanghai']
+<!--   -->  locations['Africa'] = {'Egypt': ['Cairo']}
+
+<!--   -->  print 1
+<!--   -->  usa_sorted = sorted(locations['North America']['USA'])
+<!--   -->  for city in usa_sorted:
+<!--   -->      print city
+
+<!--   -->  print 2
+<!--   -->  asia_cities = []
+<!--   -->  for countries, cities in locations['Asia'].iteritems():
+<!--   -->      city_country = cities[0] + " - " + countries
+<!--   -->      asia_cities.append(city_country)
+<!--   -->  asia_sorted = sorted(asia_cities)
+<!--   -->  for city in asia_sorted:
+<!--   -->      print city
+          </code></pre>
+          <h4><a href="https://www.youtube.com/watch?v=8yik3RlDFgM"> 4. Introduction To Hashing </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=kCPFfHx_LgQ"> 5. Hashing </a></h4>
+          <h4><a href="https://www.youtube.com/watch?v=BUaWIjZ_ToY"> 6. Collisions </a></h4>
+          <h4> 7. Quiz: Load Factor </h4>
+          <p>
+            When we're talking about hash tables, we can define a
+            "load factor":
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  Load Factor = Number of Entries / Number of Buckets
+          </code></pre>
+          <p>
+            The purpose of a load factor is to give us a sense of how "full" a
+            hash table is. For example, if we're trying to store 10 values in a
+            hash table with 1000 buckets, the load factor would be 0.01, and
+            the majority of buckets in the table will be empty. We end up
+            wasting memory by having so many empty buckets, so we may want to
+            rehash, or come up with a new hash function with less buckets. We
+            can use our load factor as an indicator for when to rehash—as the
+            load factor approaches 0, the more empty, or sparse, our hash table
+            is.
+          </p>
+          <p>
+            On the flip side, the closer our load factor is to 1 (meaning the
+            number of values equals the number of buckets), the better it would
+            be for us to rehash and add more buckets. Any table with a load
+            value greater than 1 is guaranteed to have collisions.
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=A-ahUVi8pYQ"> 8. Hash Maps </a></h4>
+          <p>
+            A Python dictionary is a hash map!
+          </p>
+          <h4><a href="https://www.youtube.com/watch?v=WyFwieF1NN4"> 9. String Keys </a></h4>
+          <p>
+            Here's a
+            <a href="http://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier">
+            Stack Overflow</a> post with a discussion of Java's choice of
+            31 in the hashing formula.
+          </p>
+          <h4> 10. Quiz: String Keys Practice </h4>
+          <p>
+            In this quiz, you'll write your own hash table and hash function
+            that uses string keys. Your table will store strings in buckets by
+            their first two letters, according to the formula below:
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter
+          </code></pre>
+          <p>
+            You can assume that the string will have at least two letters, and
+            the first two characters are uppercase letters (ASCII values from
+            65 to 90). You can use the Python function <code>ord()</code> to
+            get the ASCII value of a letter, and <code>chr()</code> to get the
+            letter associated with an ASCII value.
+          </p>
+          <p>
+            You'll create a HashTable class, methods to store and lookup values,
+            and a helper function to calculate a hash value given a string.
+            You cannot use a Python dictionary—only lists! And remember to
+            store lists at each bucket, and not just the string itself. For
+            example, you can store "UDACITY" at index 8568 as
+            <code>["UDACITY"]</code>.
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  """Write a HashTable class that stores strings
+<!--   -->  in a hash table, where keys are calculated
+<!--   -->  using the first two letters of the string."""
+
+<!--   -->  class HashTable(object):
+<!--   -->      def __init__(self):
+<!--   -->          self.table = [None]*10000
+
+<!--   -->      def store(self, string):
+<!--   -->          """Input a string that's stored in
+<!--   -->          the table."""
+<!--   -->          pass
+
+<!--   -->      def lookup(self, string):
+<!--   -->          """Return the hash value if the
+<!--   -->          string is already in the table.
+<!--   -->          Return -1 otherwise."""
+<!--   -->          return -1
+
+<!--   -->      def calculate_hash_value(self, string):
+<!--   -->          """Helper function to calulate a
+<!--   -->          hash value from a string."""
+<!--   -->          return -1
+
+<!--   -->  # Setup
+<!--   -->  hash_table = HashTable()
+
+<!--   -->  # Test calculate_hash_value
+<!--   -->  # Should be 8568
+<!--   -->  print hash_table.calculate_hash_value('UDACITY')
+
+<!--   -->  # Test lookup edge case
+<!--   -->  # Should be -1
+<!--   -->  print hash_table.lookup('UDACITY')
+
+<!--   -->  # Test store
+<!--   -->  hash_table.store('UDACITY')
+<!--   -->  # Should be 8568
+<!--   -->  print hash_table.lookup('UDACITY')
+
+<!--   -->  # Test store edge case
+<!--   -->  hash_table.store('UDACIOUS')
+<!--   -->  # Should be 8568
+<!--   -->  print hash_table.lookup('UDACIOUS')
+          </code></pre>
+          <p>
+            Solution
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  class HashTable(object):
+<!--   -->      def __init__(self):
+<!--   -->          self.table = [None]*10000
+
+<!--   -->      def store(self, string):
+<!--   -->          hv = self.calculate_hash_value(string)
+<!--   -->          if hv != -1:
+<!--   -->              if self.table[hv] != None:
+<!--   -->                  self.table[hv].append(string)
+<!--   -->              else:
+<!--   -->                  self.table[hv] = [string]
+
+<!--   -->      def lookup(self, string):
+<!--   -->          hv = self.calculate_hash_value(string)
+<!--   -->          if hv != -1:
+<!--   -->              if self.table[hv] != None:
+<!--   -->                  if string in self.table[hv]:
+<!--   -->                      return hv
+<!--   -->          return -1
+
+<!--   -->      def calculate_hash_value(self, string):
+<!--   -->          value = ord(string[0])*100 + ord(string[1])
+<!--   -->          return value
+          </code></pre>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
