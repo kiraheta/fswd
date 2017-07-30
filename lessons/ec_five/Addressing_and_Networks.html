@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Networking_for_Web_Developers.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Addressing and Networks </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=FppVqIfR1Es"> 1.Introduction </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=zk3CCX_GfA8"> 2. Special Addresses </a></h4>
+            <h4> 3. Reserved IP addresses </h4>
+            <p>
+              An IPv4 address is actually a 32-bit numeric value. We usually
+              write it as a <em>dotted quad</em> — four decimal numbers,
+              separated by dots, like
+              <code>206.190.36.45</code> or <code>180.149.132.47</code>. Each
+              of the four numbers written down like this represents one
+              octet or 8-bit value.
+            </p>
+            <p>
+              But writing an IP address as four decimal numbers is just a
+              convention to make it easier to read. When it’s used between
+              computers, an address is transmitted in binary, just like all
+              the other data sent over the network.
+            </p>
+            <p>
+              However, not all of the possible 32-bit values are used for real
+              addresses. Some of them are used for special applications that
+              use addresses differently. Some of them are reserved for internal
+              private networks. Some of them are for testing or documentation.
+            </p>
+            <p>
+              Here's a visualization of the entire IPv4 address space. Each
+              square represents one possible value of the <em>first octet</em>
+              of an address. For instance, the square on the top right, labeled
+              15, represents all the IPv4 addresses that start with 15 as their
+              first octet.
+            </p>
+            <p>
+              <img class="img-responsive"
+              src="../../images/Reserved_IP_addresses.png"
+                   alt="IPv4 address space">
+            </p>
+            <ol>
+              <li>
+                The light-green squares (<code>0</code>, <code>10</code>, and
+                <code>127</code>) are blocks that are entirely reserved.
+              </li>
+              <li>
+                The dark-green squares are blocks that are <em>partly</em>
+                reserved. For instance, not all of the <code>192</code> block
+                is reserved, but some of it is.
+              </li>
+              <li>
+                The entire cyan row (starting at <code>224</code>) is set aside
+                for <a href="https://en.wikipedia.org/wiki/IP_multicast">IP
+                  multicast</a>.
+              </li>
+              <li>
+                And the entire orange bottom row (starting at
+                <code>240</code>) was
+                <a href="http://packetlife.net/blog/2010/oct/14/ipv4-exhaustion-what-about-class-e-addresses/">
+                  originally set aside for "future use" but was effectively
+                  lost due to being blocked as invalid</a>. No, really. We lost
+                  1/16th of all IPv4 addresses due to mistaken planning.
+              </li>
+            </ol>
+            <p>
+              In fact, <em>just over one-eighth</em> of all possible IPv4
+              addresses are set aside for something other than addressing
+              public hosts.
+            </p>
+            <p>
+              But as you'll see, even if we did use all 32-bit addresses to
+              represent public hosts, that still wouldn’t really be enough.
+            </p>
+            <h4><a href="https://www.youtube.com/watch?v=YQLMdzPCBQ0"> 4. Quiz: How Many Addresses </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=e-AoilQ8v6o"> 5. Netblocks And Subnets </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=IkGw5BIxZGE"> 6. Quiz: Subnet Masks </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=uAid90W8Y78"> 7. Quiz: Stanford's /14 </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=8R3Q9u1_XHw"> 8. Not Enough Addresses </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=vH8raiRvJlk"> 9. The Host Is A Lie </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=Vk7-g7Cvrec"> 10. Quiz: Interfaces Quiz </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=JOomC1wFrbU"> 11. Routers And Default Gateways </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=_lF2B6G_1rQ"> 12. Quiz: Default Gateway Quiz </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=IFcIeN0EmgM"> 13. NAT </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=XQjmXmA7tmY"> 14. Quiz: Private And Public </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=FXi7U8u-5sc"> 15. IPv6 </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=3V735AXl644"> 16. Quiz: IPv6 Quiz </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=SHftDECOEdE"> 17. Outro </a></h4>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
