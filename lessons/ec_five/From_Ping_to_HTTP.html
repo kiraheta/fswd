@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Networking_for_Web_Developers.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> From Ping to HTTP </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=wlVcGc1OdD8"> 1. Introduction  </a></h4>
+            <h4> 2. Setting up for this course </h4>
+            <p>
+              To do the exercises in this course, you will need access to a
+              Linux machine you can log into with SSH. There are a couple of
+              ways you can get one: you can use a hosting service that gives
+              you a Linux shell environment; or you can install a Linux-based
+              virtual machine on your own computer.
+            </p>
+            <p>
+              Regardless of which path you are taking, follow the instructions
+              below (under "<strong>Installing networking tools</strong>") to
+              set up the networking tools for this course.
+            </p><br>
+            <h5><strong>Your Linux machine (Local VM option)</strong></h5>
+            <p>
+              If you prefer to work on your own computer instead of a
+              commercial service, you can run a Linux virtual machine (VM) on
+              top of your regular operating system.
+            </p>
+            <p>
+              You will need to install two pieces of software:
+            </p>
+            <ol>
+              <li>
+                VirtualBox, which you can get from this
+                <a href="https://www.virtualbox.org/wiki/Downloads">download
+                  page</a>.
+              </li>
+              <li>
+                Vagrant, which you can get from this
+                <a href="https://www.vagrantup.com/downloads.html">download
+                  page</a>.
+              </li>
+            </ol>
+            <p>
+              You will also need a Unix-style terminal program. On Mac or
+              Linux systems, you can use the built-in Terminal. On Windows, we
+              recommend Git Bash, which is installed with the Git version
+              control software.
+            </p>
+            <p>
+              Once you have VirtualBox and Vagrant installed, open a terminal
+              and run the following commands:
+            </p>
+            <pre>
+<!--     -->  <code>mkdir networking
+<!--     -->  cd networking
+<!--     -->  vagrant init ubuntu/trusty64
+<!--     -->  vagrant up</code></pre>
+            <p>
+              This will create a new directory for this course and begin
+              downloading a Linux image into this directory. It may take a long
+              time to download, depending on your Internet connection.
+            </p>
+            <p>
+              When it is complete, you can log into the Linux instance with
+              <code>vagrant ssh</code>. You are now ready to continue with the
+              course.
+            </p>
+            <p>
+              If you log out of the Linux instance or close the terminal, the
+              next time you want to use it you only need to run
+              <code>cd networking</code> and <code>vagrant ssh</code>.
+            </p><br>
+            <h5><strong>Installing networking tools</strong></h5>
+            <p>
+              Regardless of whether you're using the local or remote option,
+              you'll need to install some networking tools to do this course.
+            </p>
+            <p>
+              SSH into your Linux machine. Then take a moment to bring it up to
+              date with any package updates:
+              <code>sudo apt-get update && sudo apt-get upgrade</code>
+            </p>
+            <p>
+              Depending on how recently that machine was set up, you may get
+              messages asking whether it's OK to install various packages or
+              change various files. It should be safe to accept any changes
+              the updater proposes to make.
+            </p>
+            <p>
+              (If you haven't seen it before, the <code>&&</code> in the above
+              command means "run the first program; then if that succeeds, run
+              the second program." Useful shell trick.)
+            </p>
+            <p>
+              There are two reasons to do this update now: first, it's a good
+              practice to keep your servers up to date; and second, if you
+              don't update it, the new software for this course may not install
+              correctly.
+            </p>
+            <p>
+              You'll be using several network utility programs in this course.
+              Some of them may already be installed, but just to make sure,
+              let's install them all:
+            </p>
+            <p>
+              <code>sudo apt-get install netcat-openbsd tcpdump traceroute mtr
+              </code>
+            </p>
+            <p>
+              Once this installation completes, your machine is ready to do the
+              exercises in this course.
+            </p>
+
+            <h4><a href="https://www.youtube.com/watch?v=GHGVqyB50FM"> 3. Quiz: Try Some Network Things!  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=E3v2MxkTLgM"> 4. Quiz: Ping 8.8.8.8  </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=jCfD38sYHQI"> 5. Ping Versus HTTP </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=c_LATpOTFQY"> 6. Quiz: Write Your Own HTTP To Wikipedia </a></h4>
+            <p>
+              Don't re-type this command! Copy and paste into your terminal:
+            </p>
+            <p>
+              <code>printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80</code>
+            </p>
+            <h4><a href="https://www.youtube.com/watch?v=Yc-bluRQxrg"> 7. Printf And Netcat </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=US4h2aoUt1w"> 8. Quiz: What Web Server Does Google Use? </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=uN8nAfUUoCk"> 9. Printf And Netcat Illustrate Layers </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=g-UgxuiM2UY"> 10. Quiz: Listen On A Port </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=FBPUDoyPr8Y"> 11. Waiting For Your Call </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=K4N2B92Nqh8"> 12. Quiz: Listening And Connecting </a></h4>
+            <h4> 13. Experiment with nc and HTTP </h4>
+            <p>
+              To get a better understanding of what netcat can do here, take
+              another look at the <strong>nc</strong> manual page. Specifically,
+              there's a section in there titled
+              "<strong>Talking to Servers</strong>". Take a look at that
+              section. Then, using what you learn there and what you've seen
+              already in this lesson, try some experiments of your own with
+              <strong>nc</strong> and web servers.
+            </p>
+            <p>
+              Here are some ideas:
+            </p><br>
+            <h5><strong>Sending HTTP headers</strong></h5>
+            <p>
+              When you send an HTTP request using <strong>nc</strong>, the
+              headers occur on lines after the HTTP verb itself. The
+              <strong>Host</strong>: header you've seen in the previous
+              exercises is required by the HTTP 1.1 protocol. What happens if
+              you make requests that don't provide this header?
+            </p>
+            <p>
+              Are there other headers that it might be interesting to try
+              sending? You can find a
+              <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields">
+                list of HTTP headers at Wikipedia</a>.
+            </p>
+            <p>
+              What happens if you send a header you just made up?
+            </p>
+            <p>
+              What happens if you send an HTTP verb you just made up, instead
+              of GET or HEAD or POST or the other real ones?
+            </p><br>
+            <h5><strong>Interpreting responses</strong></h5>
+            <p>
+              If you send a well-formed request for host
+              may get back a <strong>302 Found</strong> response with a
+              <strong>Location</strong>: header. What does this header mean?
+              What would a browser do in response to receiving that header?
+            </p><br>
+            <h5><strong>Fetching content</strong></h5>
+            <p>
+              Most of the requests you have sent using <strong>nc</strong> are
+              HEAD requests. HEAD is an HTTP verb that asks the server to
+              send just the headers for a resource, rather than sending the
+              full data. You can do GET requests as well, though:
+            </p>
+            <p>
+              <code>printf "GET / HTTP/1.1\r\nHost: www.example.com\r\n\r\n" | nc www.example.com 80</code>
+            </p>
+            <p>
+              How would you separate the headers from the data in the response
+              you get here?
+            </p>
+            <p>
+              If you would like to save the results of an <strong>nc</strong>
+              command to a file, you can do this with the > shell redirection
+              operator. For instance, this will save the results to the file
+              <strong>example.txt</strong>:
+            </p>
+            <p>
+              <code>printf "GET / HTTP/1.1\r\nHost: www.example.com\r\n\r\n" | nc www.example.com 80 > example.txt</code>
+            </p>
+            <h4><a href="https://www.youtube.com/watch?v=EtYF0DpoAjQ"> 14. Quiz: Port Numbers </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=DVddx7VcmKc"> 15. Quiz: Port Numbers Part Two </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=N7GGIW4d9d4"> 16. Quiz: One Listening Server Per Port </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=g7a89N_NAMw"> 17. Quiz: Be A Web Server </a></h4>
+            <p>
+              Here's that command for you to copy:
+            </p>
+            <p>
+              <code>printf 'HTTP/1.1 302 Moved\r\nLocation:
+                https://www.eff.org/' | nc -l 2345</code>
+            </p>
+            <p>
+              You will need to use the IP address of your Linux server in the
+              URL that you put into your browser.
+            </p>
+
+            <h4><a href="https://www.youtube.com/watch?v=stSZghczY7c"> 18. Outro </a></h4>
+
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
