@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Career_Full_Stack_Interview_Practice.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Technical Interview - Python </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="lesson">
+          <h4> 1. Project Description </h4>
+          <p>
+            It's time to show off what you've learned about technical
+            interviewing!
+          </p>
+          <p>
+            For this project, you will be given five technical interviewing
+            questions on a variety of topics discussed in the technical
+            interviewing course. You should write up a clean and efficient
+            answer in Python, as well as a text explanation of the efficiency
+            of your code and your design choices. A qualified reviewer will
+            look over your answer and give you feedback on anything that might
+            be awesome or lacking—is your solution the most efficient one
+            possible? Are you doing a good job of explaining your thoughts?
+            Is your code elegant and easy to read?
+          </p>
+          <p>
+            Answer the following questions:
+          </p>
+          <h5><strong>Question 1</strong></h5>
+          <p>
+            Given two strings <code>s</code> and <code>t</code>, determine
+            whether some anagram of <code>t</code> is a substring of
+            <code>s</code>. For example: if
+            <code>s = "udacity"</code> and <code>t = "ad"</code>, then the
+            function returns <code>True</code>. Your function definition
+            should look like: <code>question1(s, t)</code> and return a boolean
+            <code>True</code> or <code>False</code>.
+          </p>
+          <h5><strong>Question 2</strong></h5>
+          <p>
+            Given a string <code>a</code>, find the longest palindromic
+            substring contained in <code>a</code>. Your function definition
+            should look like <code>question2(a)</code>, and return a string.
+          </p>
+          <h5><strong>Question 3</strong></h5>
+          <p>
+            Given an undirected graph G, find the minimum spanning tree within
+            G. A minimum spanning tree connects all vertices in a graph with
+            he smallest possible total weight of edges. Your function should
+            take in and return an adjacency list structured like this:
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  {'A': [('B', 2)],
+<!--   -->   'B': [('A', 2), ('C', 5)],
+<!--   -->   'C': [('B', 5)]}
+          </code></pre>
+          <p>
+            Vertices are represented as unique strings. The function definition
+            should be <code>question3(G)</code>
+          </p>
+          <h5><strong>Question 4</strong></h5>
+          <p>
+            Find the least common ancestor between two nodes on a binary search
+            tree. The least common ancestor is the farthest node from the root
+            that is an ancestor of both nodes. For example, the root is a
+            common ancestor of all nodes on the tree, but if both nodes are
+            descendents of the root's left child, then that left child might
+            be the lowest common ancestor. You can assume that both nodes are
+            in the tree, and the tree itself adheres to all BST properties.
+            The function definition should look like
+            <code>question4(T, r, n1, n2)</code>, where <code>T</code> is the
+            tree represented as a matrix, where the index of the list is equal
+            to the integer stored in that node and a <code>1</code> represents
+            a child node, <code>r</code> is a non-negative integer representing
+            the root, and <code>n1</code> and <code>n2</code> are non-negative
+            integers representing the two nodes in no particular order. For
+            example, one test case might be
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  question4([[0, 1, 0, 0, 0],
+<!--   -->             [0, 0, 0, 0, 0],
+<!--   -->             [0, 0, 0, 0, 0],
+<!--   -->             [1, 0, 0, 0, 1],
+<!--   -->             [0, 0, 0, 0, 0]],
+<!--   -->            3,
+<!--   -->            1,
+<!--   -->            4)
+          </code></pre>
+          <p>
+            and the answer would be <code>3</code>.
+          </p>
+          <h5><strong>Question 5</strong></h5>
+          <p>
+            Find the element in a singly linked list that's <code>m</code>
+            elements from the end. For example, if a linked list has 5 elements,
+            the 3rd element from the end is the 3rd element. The function
+            definition should look like <code>question5(ll, m)</code>, where
+            <code>ll</code> is the first node of a linked list and
+            <code>m</code> is the "mth number from the end". You should
+            copy/paste the <code>Node</code> class below to use as a
+            representation of a node in the linked list. Return the value of
+            the node at that position.
+          </p>
+          <pre style="display: inline-block; width: 100%;">
+            <code class="language-python">
+<!--   -->  class Node(object):
+<!--   -->      def __init__(self, data):
+<!--   -->          self.data = data
+<!--   -->          self.next = None
+          </code></pre>
+          <h4> 2. Project: Technical Interview Practice </h4>
+          <h5><strong>Project Submission</strong></h5>
+          <p>
+            For this project, you will be given five technical interviewing
+            questions on a variety of topics discussed in the technical
+            interviewing course. You should write up a clean and efficient
+            answer in Python, as well as a text explanation of the efficiency
+            of your code and your design choices. A qualified reviewer will
+            look over your answer and give you feedback on anything that might
+            be awesome or lacking—is your solution the most efficient one
+            possible? Are you doing a good job of explaining your thoughts?
+            Is your code elegant and easy to read?
+          </p>
+          <h5><strong>Submission Instructions</strong></h5>
+          <ol>
+            <li>
+              For each question, create a solution in Python (version 2). All
+              solutions should be functions named as “question1”, “question2”,
+              et cetera. Feel free to make additional helper functions or
+              classes as needed. Code solutions must be in a file called
+              "solutions.py".
+            </li>
+            <li>
+              In the same .py file, include at least 3 test cases for each
+              solution. For each test case, write the function call with the
+              input you want to test and print it to the console, like "print
+              question1()". On the next line, comment out the output you expect
+              to see from that function call. At least 2 of these must be edge
+              cases, testing inputs such as null values, empty inputs,
+              unusually large values, et cetera.
+            </li>
+            <li>
+              Write up an explanation for each question in a single separate
+              text file (called "explanations.txt"). Your paragraph should not
+              be a detailed walkthrough of the code you provided, but provide
+              your reasoning behind decisions made in the code. For example,
+              why did you use that data structure? You also need to explain
+              the efficiency (time and space) of your solution.
+            </li>
+            <li>
+              Compress your one Python and one text file into a .zip, and
+              submit.
+            </li>
+          </ol>
+          <h5><strong>Evaluation</strong></h5>
+          <p>
+            Check out the <a href="../../images/P_Technical _Interview_Practice_Rubric.pdf">rubric</a> here!
+          </p>
+          <h5><strong>Career Counselors</strong></h5>
+          <p>
+            Remember that career counselors are always available to help you on
+            your job search. Make an appointment with them
+            <a href="https://calendly.com/career-coach">here</a>.
+          </p>
+          <p>
+            <a href="https://review.udacity.com/#!/rubrics/154/start">
+              <button type="button" class="btn btn-primary">
+              Submit Project!</button></a>
+          </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer> -->
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
