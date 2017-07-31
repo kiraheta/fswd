@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Full Stack Web Development</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+      	<div class="col-lg-12">
+          <a href="../../index.html"><img class="logo jumbotron img-responsive" src="../../images/udacity_FSWD_ND_logo.png"
+               alt="udacity logo"></a>
+      	</div>
+      </header>
+
+      <div class="return">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="../../templates/Networking_for_Web_Developers.html">
+              <span class="glyphicon glyphicon-circle-arrow-left"
+              style="font-size:3rem;"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson-title">
+            <h1> Big Networks </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="horizontal-line">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="lesson">
+            <h4><a href="https://www.youtube.com/watch?v=ra9-d0VL1KU"> 1. Intro: Slow Sucks! </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=iv0O2oJmPbQ"> 2. Quiz: Hops: Not Just For Beer </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=p2r2wx0N6LQ"> 3. The Story About Ping </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=qrrXxn2i_Q4"> 4. The Story About Traceroute </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=jlDmNvTP0d4"> 5. Bandwidth Across Networks </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=bDky-ZGHsho"> 6. What Is Fast Anyway </a></h4>
+            <p>Go watch RADM Grace Hopper's
+              <a href="https://www.youtube.com/watch?v=JEpsKnWZrJ8">"Nanosecond"
+                lecture</a>, then come back!<p>
+            <h4><a href="https://www.youtube.com/watch?v=Tdwtcyo9fbc"> 7. Quiz: Bandwidth-Delay Product </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=xGr0-uPQMIU"> 8. Quiz: Congestion </a></h4>
+            <h4> 9. Middleboxes 1: Firewalls & Filtering </h4>
+            <p>
+              <strong>Firewalls</strong> are devices that network operators
+              can use to filter traffic that's coming into or leaving their
+              network. A firewall is one example of a class of network devices
+              called <strong>middleboxes</strong> — devices that inspect,
+              modify, or filter network traffic. Other examples of middleboxes
+              include intrusion detection systems and load balancers.
+              Technically, it's only a <em>middle</em>-box if it's a separate
+              device from the client or server — server-side "firewalls"
+              like Linux iptables aren't middleboxes.
+            </p>
+            <p>
+              A firewall can be a real boon to an organization's network
+              security. The most common configuration for a firewall is to
+              drop any incoming traffic except traffic to (host, port) pairs
+              that are supposed to be receiving connections from the Internet.
+              This lets the network administrator be sure that other machines
+              on the network — like backend databases or administrative
+              systems — aren’t going to get direct attacks from outside.
+            </p>
+            <p>
+              But firewalls can cause trouble for application developers. If
+              you're trying to test or deploy a network app and there's a
+              firewall between your server and the user, that firewall can
+              potentially interfere with your app or block it completely. In
+              order to deploy an application on a particular server and port,
+              it helps to know what kind of firewall might be between you and
+              your user. One of the reasons that many non-Web applications use
+              HTTP as a transport is that HTTP is often unblocked at firewalls
+              even when other ports are blocked.
+            </p>
+            <p>
+              Aside from blocking traffic outright, middleboxes can also alter
+              traffic, for instance replacing web pages with error messages.
+              This is often done for social or political purposes. For instance,
+              in the U.S., many schools use traffic filters of various sorts
+              to prevent students from accessing web sites deemed inappropriate
+              for children. But what sites get counted as "inappropriate" can
+              reflect the biases or opinions of the people who wrote or
+              configured the filter.
+            </p>
+            <p>
+              And people who program these things can always make mistakes,
+              too. For instance, there's a whole class of
+              <a href="http://www.telegraph.co.uk/news/newstopics/howaboutthat/2667634/The-Clbuttic-Mistake-When-obscenity-filters-go-wrong.html">
+                bugs</a> that arise from filters that try to block rude words,
+                but end up blocking or replacing innocuous words that contain a
+                rude word as a substring.
+            </p>
+            <p>
+              Rather famously, some countries have deployed large-scale
+              firewalls or filters to censor their citizens' access to the
+              global Internet. Major well-known sites such as YouTube and
+              Twitter are sometimes blocked entirely in some countries. That
+              can happen to your site, too — just something to keep in mind.
+            </p>
+            <h4><a href="https://www.youtube.com/watch?v=MXifzFjiWXg"> 10. Quiz: What Can A Filter Do? </a></h4>
+            <h4> 11. Middleboxes 2: Proxies & NAT </h4>
+            <h5><strong> Middleboxes 2: Proxies & NAT</strong></h5>
+            <p>
+              Earlier in this course, you learned about the IPv4 address
+              shortage; and the deployment of <strong>Network Address
+              Translation</strong>, or NAT, as a workaround for it. With NAT,
+              several devices can access Internet resources through a single
+              public IP address, with the NAT device using port numbers to
+              match up connections on the inside and outside.
+            </p>
+            <p>
+              For end-users, NAT devices overlap with firewalls. Typical home
+              routers can act as both a NAT and a simple firewall, often having
+              the ability to block or filter at a very basic level. At a larger
+              scale, ISPs and other organizations have deployed NAT devices for
+              their whole customer networks, called
+              <a href="https://en.wikipedia.org/wiki/Carrier-grade_NAT">
+              carrier-grade NAT</a>. This is very common for mobile networks,
+              and also for ISPs in the developing world, where there never were
+              anywhere near enough addresses allocated for the number of users.
+            </p>
+            <p>
+              Usually we imagine an end-user computer as having only one person
+              using it at a time. After all, there's generally only one mouse
+              and keyboard. Two people typing on the same keyboard at the same
+              time doesn't generally happen outside of
+              <a href="https://www.youtube.com/watch?v=u8qgehH3kEQ">poorly
+              thought-out TV shows</a>. But in the case of NAT, your web site
+              can see requests from the same IP address that actually come
+              from different users on different computers.
+            </p>
+            <p>
+              Another way that can happen is through the use of
+              <strong>web proxies</strong>. Whereas a NAT works at the IP level,
+              rewriting packets, a web proxy works at the HTTP level, taking
+              queries from browsers and sending them out to web servers. Many
+              organizations use web proxies for caching, including some ISPs.
+              From the standpoint of a web developer or site operator, traffic
+              from a busy proxy looks much the same as traffic from a busy NAT:
+              queries for many users, on many actual computers, are funneled
+              through a single public IP address.
+            </p>
+            <h4><a href="https://www.youtube.com/watch?v=qbesLoi4GZA"> 12. Quiz: Users Behind A NAT </a></h4>
+            <h4><a href="https://www.youtube.com/watch?v=OZPOL5NEbXM"> 13. Outro </a></h4>
+            <p>
+              <em>
+                I learned a valuable lesson about the state of the Internet
+                throughout the rest of the world. Many of us are fortunate to
+                live in high bandwidth regions, but there are still large
+                portions of the world that do not.
+              </em>
+            </p>
+            <p>
+              — "<a href="http://blog.chriszacharias.com/page-weight-matters">Page Weight Matters</a>", by Chris Zacharias (2012)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="row col-md-12">
+            <p><span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="glyphicon glyphicon-chevron-right"></span> with
+               <span class="glyphicon glyphicon-heart"></span> by Kenny Iraheta
+            </p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
